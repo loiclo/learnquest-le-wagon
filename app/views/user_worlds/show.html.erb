@@ -1,1 +1,4 @@
 <h1>World show</h1>
+<% @user_world.world.quizzes.each do |quiz|%>
+<h1><%= link_to quiz.number, user_world_user_quiz_path(@user_world, UserQuiz.find_by(user:current_user, quiz: quiz)) %></h1>
+<% end %>
