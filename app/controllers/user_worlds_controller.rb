@@ -1,9 +1,10 @@
 class UserWorldsController < ApplicationController
   def index
-    @worlds = UserWorld.all
+    @user_worlds = UserWorld.all
   end
 
   def show
-    @world = UserWorld.find(params[:id])
+    @user_worlds = UserWorld.all
+    @user_world = UserWorld.find(params[:id])
   end
 end
