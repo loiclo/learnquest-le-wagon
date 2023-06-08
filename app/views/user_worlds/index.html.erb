@@ -1,1 +1,4 @@
 <h1>Tout les mondes | index user_worlds</h1>
+<% @user_worlds.each do |world| %>
+<h1><%= link_to world.world.title, user_world_path(world) %></h1>
+<% end %>
