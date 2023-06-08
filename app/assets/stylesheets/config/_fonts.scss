@@ -1,16 +1,39 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 
+
 // Define fonts for body and headers
 $body-font: "Work Sans", "Helvetica", "sans-serif";
 $headers-font: "Nunito", "Helvetica", "sans-serif";
 
-// To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
+
+// Import de font en fichier otff:
+@font-face {
+  font-family: 'Kiddosy block';
+  src: url('./fonts/Kiddosy-block.otf') format('opentype');
+  /* Autres propriétés de la police si nécessaire */
+}
+
+@font-face {
+  font-family: 'Kiddosy extrude left';
+  src: url('./fonts/Kiddosy-extrude-left.otf') format('opentype');
+  /* Autres propriétés de la police si nécessaire */
+}
+
+@font-face {
+  font-family: 'Kiddosy extrude right';
+  src: url('./fonts/Kiddosy-extrude-right.otf') format('opentype');
+  /* Autres propriétés de la police si nécessaire */
+}
+
+@font-face {
+  font-family: 'Kiddosy outilne';
+  src: url('./fonts/Kiddosy-outline.otf') format('opentype');
+  /* Autres propriétés de la police si nécessaire */
+}
+
+@font-face {
+  font-family: 'Kiddosy regular';
+  src: url('./fonts/Kiddosy Regular.otf') format('opentype');
+  /* Autres propriétés de la police si nécessaire */
+}
