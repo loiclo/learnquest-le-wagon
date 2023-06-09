@@ -8,23 +8,35 @@
   color: white;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.0);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  background-color: rgba(0,0,0,0.2);
-  border-color: rgba(0,0,0,2);
-  border-style: solid;
-  border-width: 1px 1px 1px 1px;
-  width: 400px;
-  height: 200px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.0);
+  background-color: rgba(0, 0, 0, 0.0);
+  border-color: rgba(0,0,0,0.0);
+  width: 160px;
+  height: 80px;
   text-decoration: none;
+  z-index: 2;
+  padding: 32px;
+  margin-bottom: 32px;
 }
 
 .card-world-index-container {
-  width: 1000px;
+  width: 160px;
   margin: 0 auto;
-  height: 400px;
-  display: flex;
+  height: 240px;
   align-items: center;
   justify-content: space-evenly;
+  background-color: rgba(0,0,0,0.0);
+  z-index: 1;
+  position: absolute;
+  margin-top: 24px;
+  margin-left: 680px;
+}
+
+.pannel {
+  margin: 0 auto;
+  margin-left: 640px;
+  position: absolute;
+  z-index: 0;
 }
