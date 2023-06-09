@@ -1,0 +1,30 @@
+.card-world-index {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.2);
+  border-color: rgba(0,0,0,2);
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  width: 400px;
+  height: 200px;
+  text-decoration: none;
+}
+
+.card-world-index-container {
+  width: 1000px;
+  margin: 0 auto;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
