@@ -4,5 +4,6 @@ class UserQuizzesController < ApplicationController
   end
   def show
     @user_quiz = UserQuiz.find(params[:id])
+    @quiz = @user_quiz.quiz
   end
 end

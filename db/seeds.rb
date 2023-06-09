@@ -143,8 +143,8 @@ hugo_user_world_two = UserWorld.create!(user_id: hugo.id, world_id: world_two.id
 guillaume_user_world_one = UserWorld.create!(user_id: guillaume.id, world_id: world_one.id, done_flag: false)
 guillaume_user_world_two = UserWorld.create!(user_id: guillaume.id, world_id: world_two.id, done_flag: false)
 
-loïc_user_world_one = UserWorld.create!(user_id: loïc.id, world_id: world_one.id, done_flag: false)
-loïc_user_world_two = UserWorld.create!(user_id: loïc.id, world_id: world_two.id, done_flag: false)
+loic_user_world_one = UserWorld.create!(user_id: loic.id, world_id: world_one.id, done_flag: false)
+loic_user_world_two = UserWorld.create!(user_id: loic.id, world_id: world_two.id, done_flag: false)
 
 eva_user_world_one = UserWorld.create!(user_id: eva.id, world_id: world_one.id, done_flag: false)
 eva_user_world_two = UserWorld.create!(user_id: eva.id, world_id: world_two.id, done_flag: false)
@@ -163,10 +163,10 @@ guillaume_user_world_one_quiz_two = UserQuiz.create!(user_id: guillaume.id, quiz
 guillaume_user_world_two_quiz_one = UserQuiz.create!(user_id: guillaume.id, quiz_id: world_two_quiz_one.id, done_flag: false)
 guillaume_user_world_two_quiz_two = UserQuiz.create!(user_id: guillaume.id, quiz_id: world_two_quiz_two.id, done_flag: false)
 
-loïc_user_world_one_quiz_one = UserQuiz.create!(user_id: loïc.id, quiz_id: world_one_quiz_one.id, done_flag: false)
-loïc_user_world_one_quiz_two = UserQuiz.create!(user_id: loïc.id, quiz_id: world_one_quiz_two.id, done_flag: false)
-loïc_user_world_two_quiz_one = UserQuiz.create!(user_id: loïc.id, quiz_id: world_two_quiz_one.id, done_flag: false)
-loïc_user_world_two_quiz_two = UserQuiz.create!(user_id: loïc.id, quiz_id: world_two_quiz_two.id, done_flag: false)
+loic_user_world_one_quiz_one = UserQuiz.create!(user_id: loic.id, quiz_id: world_one_quiz_one.id, done_flag: false)
+loic_user_world_one_quiz_two = UserQuiz.create!(user_id: loic.id, quiz_id: world_one_quiz_two.id, done_flag: false)
+loic_user_world_two_quiz_one = UserQuiz.create!(user_id: loic.id, quiz_id: world_two_quiz_one.id, done_flag: false)
+loic_user_world_two_quiz_two = UserQuiz.create!(user_id: loic.id, quiz_id: world_two_quiz_two.id, done_flag: false)
 
 eva_user_world_one_quiz_one = UserQuiz.create!(user_id: eva.id, quiz_id: world_one_quiz_one.id, done_flag: false)
 eva_user_world_one_quiz_two = UserQuiz.create!(user_id: eva.id, quiz_id: world_one_quiz_two.id, done_flag: false)
@@ -213,21 +213,21 @@ guillaume_user_world_two_quiz_two_question_three = UserQuestion.create!(user_id:
 
 
 
-loïc_user_world_one_quiz_one_question_one = UserQuestion.create!(user_id: loïc.id, question_id: world_one_quiz_one_question_one.id, done_flag: false, try: 0)
-loïc_user_world_one_quiz_one_question_two = UserQuestion.create!(user_id: loïc.id, question_id: world_one_quiz_one_question_two.id, done_flag: false, try: 0)
-loïc_user_world_one_quiz_one_question_three = UserQuestion.create!(user_id: loïc.id, question_id: world_one_quiz_one_question_three.id, done_flag: false, try: 0)
+loic_user_world_one_quiz_one_question_one = UserQuestion.create!(user_id: loic.id, question_id: world_one_quiz_one_question_one.id, done_flag: false, try: 0)
+loic_user_world_one_quiz_one_question_two = UserQuestion.create!(user_id: loic.id, question_id: world_one_quiz_one_question_two.id, done_flag: false, try: 0)
+loic_user_world_one_quiz_one_question_three = UserQuestion.create!(user_id: loic.id, question_id: world_one_quiz_one_question_three.id, done_flag: false, try: 0)
 
-loïc_user_world_one_quiz_two_question_one = UserQuestion.create!(user_id: loïc.id, question_id: world_one_quiz_two_question_one.id, done_flag: false, try: 0)
-loïc_user_world_one_quiz_two_question_two = UserQuestion.create!(user_id: loïc.id, question_id: world_one_quiz_two_question_two.id, done_flag: false, try: 0)
-loïc_user_world_one_quiz_two_question_three = UserQuestion.create!(user_id: loïc.id, question_id: world_one_quiz_two_question_three.id, done_flag: false, try: 0)
+loic_user_world_one_quiz_two_question_one = UserQuestion.create!(user_id: loic.id, question_id: world_one_quiz_two_question_one.id, done_flag: false, try: 0)
+loic_user_world_one_quiz_two_question_two = UserQuestion.create!(user_id: loic.id, question_id: world_one_quiz_two_question_two.id, done_flag: false, try: 0)
+loic_user_world_one_quiz_two_question_three = UserQuestion.create!(user_id: loic.id, question_id: world_one_quiz_two_question_three.id, done_flag: false, try: 0)
 
-loïc_user_world_two_quiz_one_question_one = UserQuestion.create!(user_id: loïc.id, question_id: world_two_quiz_one_question_one.id, done_flag: false, try: 0)
-loïc_user_world_two_quiz_one_question_two = UserQuestion.create!(user_id: loïc.id, question_id: world_two_quiz_one_question_two.id, done_flag: false, try: 0)
-loïc_user_world_two_quiz_one_question_three = UserQuestion.create!(user_id: loïc.id, question_id: world_two_quiz_one_question_three.id, done_flag: false, try: 0)
+loic_user_world_two_quiz_one_question_one = UserQuestion.create!(user_id: loic.id, question_id: world_two_quiz_one_question_one.id, done_flag: false, try: 0)
+loic_user_world_two_quiz_one_question_two = UserQuestion.create!(user_id: loic.id, question_id: world_two_quiz_one_question_two.id, done_flag: false, try: 0)
+loic_user_world_two_quiz_one_question_three = UserQuestion.create!(user_id: loic.id, question_id: world_two_quiz_one_question_three.id, done_flag: false, try: 0)
 
-loïc_user_world_two_quiz_two_question_one = UserQuestion.create!(user_id: loïc.id, question_id: world_two_quiz_two_question_one.id, done_flag: false, try: 0)
-loïc_user_world_two_quiz_two_question_two = UserQuestion.create!(user_id: loïc.id, question_id: world_two_quiz_two_question_two.id, done_flag: false, try: 0)
-loïc_user_world_two_quiz_two_question_three = UserQuestion.create!(user_id: loïc.id, question_id: world_two_quiz_two_question_three.id, done_flag: false, try: 0)
+loic_user_world_two_quiz_two_question_one = UserQuestion.create!(user_id: loic.id, question_id: world_two_quiz_two_question_one.id, done_flag: false, try: 0)
+loic_user_world_two_quiz_two_question_two = UserQuestion.create!(user_id: loic.id, question_id: world_two_quiz_two_question_two.id, done_flag: false, try: 0)
+loic_user_world_two_quiz_two_question_three = UserQuestion.create!(user_id: loic.id, question_id: world_two_quiz_two_question_three.id, done_flag: false, try: 0)
 
 
 eva_user_world_one_quiz_one_question_one = UserQuestion.create!(user_id: eva.id, question_id: world_one_quiz_one_question_one.id, done_flag: false, try: 0)
