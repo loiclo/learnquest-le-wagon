@@ -1,4 +1,6 @@
 <h1>Tout les mondes | index user_worlds</h1>
-<% current_user.user_worlds.each do |user_world| %>
-<h1><%= link_to user_world.world.title, user_world_path(user_world) %></h1>
-<% end %>
+  <div class="card-world-index-container">
+    <% current_user.user_worlds.each do |user_world| %>
+      <h1><%= link_to user_world.world.title, user_world_path(user_world), class:"card-world-index" %></h1>
+    <% end %>
+  </div>
