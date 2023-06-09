@@ -1,4 +1,4 @@
-<%= image_tag("worlds_selection_pannel", class:"pannel")%>
+<%= image_tag("worlds_selection_pannel.png", class:"pannel")%>
   <div class="card-world-index-container">
     <% current_user.user_worlds.each do |user_world| %>
       <h1><%= link_to user_world.world.title, user_world_path(user_world), class:"card-world-index" %></h1>
