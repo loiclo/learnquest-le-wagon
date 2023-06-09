@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :user_worlds do
-    resources :user_quizzes
+    resources :user_quizzes do
+      resources :user_questions
+    end
   end
-
 
   resources :profil
 

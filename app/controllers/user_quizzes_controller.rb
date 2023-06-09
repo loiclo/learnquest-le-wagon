@@ -1,8 +1,8 @@
 class UserQuizzesController < ApplicationController
   def index
-    @quizzes = UserQuiz.all
+    @user_quizzes = UserQuiz.all
   end
   def show
-    @quiz = UserQuiz.find(params[:id])
+    @user_quiz = UserQuiz.find(params[:id])
   end
 end
