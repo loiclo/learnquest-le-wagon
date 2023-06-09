@@ -1,3 +1,7 @@
+
+<% if user_signed_in? %>
+  <%= link_to "Log out", destroy_user_session_path,class:"log-btn btn-3" , data: {turbo_method: :delete} %>
+<% end %>
 <div class="nav-lq">
   <%= link_to image_tag("carte2.png", class: "nav-img-1"), user_worlds_path, class:"nav-btn" %>
   <%= link_to image_tag("LoicL_a_character_with3.png", class: "nav-img-2"), profil_index_path, class:"nav-btn" %>
