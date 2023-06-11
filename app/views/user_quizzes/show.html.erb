@@ -1,12 +1,5 @@
 <h1>Quizz show</h1>
 
+<%= link_to "Start", user_world_user_quiz_user_question_path(UserWorld.find_by(user: current_user, world:@user_quiz.quiz.world) ,@user_quiz , UserQuestion.find_by(user: current_user , question: @quiz.questions.first)) %>
 
-<%= link_to "Start", class: "custom-btn-start btn-start"  %>
-
-
-<%@quiz.questions.each do |question|%>
-  <%=question.title%>
-  <%question.answers.each do |answer|%>
-    <%=answer.content%>
-    <%end%>
-<%end%>
+<%= console %>
