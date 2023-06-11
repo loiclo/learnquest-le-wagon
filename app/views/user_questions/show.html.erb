@@ -1,1 +1,8 @@
 <h1>Question</h1>
+<%= @question.title %>
+<br>
+<%= @user_question.done_flag %>
+<br>
+<% @question.answers.each do |answer|%>
+<%= answer.content %>
+<% end %>

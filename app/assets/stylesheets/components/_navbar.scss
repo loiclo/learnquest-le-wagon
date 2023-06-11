@@ -11,8 +11,8 @@
 }
 
 
-.nav-btn{
-  background-color: rgba(0,0,0,.4);
+.nav-btn {
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 30px;
   height: 120px;
   width: 120px;
@@ -20,13 +20,17 @@
   align-items: center;
   justify-content: center;
   z-index: 100;
+  transition: 0.3s;
 }
 
 .nav-btn:hover {
-  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-              -4px -4px 6px 0 rgba(116, 125, 136, .5),
-    inset -4px -4px 6px 0 rgba(255,255,255,.2),
-    inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+  width: 140px;
+  height: 140px;
+  transform: scale(1);
+}
+
+.nav-btn:not(:hover) {
+  transform: scale(1);
 }
 
 .nav-img-1{
