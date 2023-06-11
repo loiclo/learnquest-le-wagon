@@ -2,9 +2,14 @@
 .img-home1{
   text-align: center;
   margin-top: 150px;
+  z-index: 100;
 }
 
 .img-home2{
   text-align: center;
   margin-top: 50px;
+}
+
+body{
+  overflow: hidden;
 }

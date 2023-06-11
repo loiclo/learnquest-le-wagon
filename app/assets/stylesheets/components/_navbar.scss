@@ -7,7 +7,9 @@
   justify-content: space-around;
   align-items: center;
   margin-bottom: 50px;
+  z-index: 100;
 }
+
 
 .nav-btn{
   background-color: rgba(0,0,0,.4);
@@ -17,6 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 100;
 }
 
 .nav-btn:hover {
