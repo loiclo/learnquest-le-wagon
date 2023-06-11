@@ -45,9 +45,9 @@ p "————#{Quiz.count} quizzes created--------"
 
 p "-------creating questions--------"
 
-world_one_quiz_one_question_one = Question.create!(quiz_id: world_one_quiz_one.id, title: "Maths niveau 1 - question 1 : Coche la proposition correcte : 327 ", number: 1, reward: 30)
-world_one_quiz_one_question_two = Question.create!(quiz_id: world_one_quiz_one.id, title: "Maths niveau 1 - question 2 : Identifie les nombres contenus dans la table de 6, coche-les.", number: 2, reward: 30)
-world_one_quiz_one_question_three = Question.create!(quiz_id: world_one_quiz_one.id, title: "Maths niveau 1 - question 3 : Coche la bonne réponse. Tu prends le quart de 24. Cela correspond à prendre la moitié de… ", number: 3, reward: 30)
+world_one_quiz_one_question_one = Question.create!(quiz_id: world_one_quiz_one.id, title: "Question 1 : Coche la proposition correcte : 327 ", number: 1, reward: 30)
+world_one_quiz_one_question_two = Question.create!(quiz_id: world_one_quiz_one.id, title: "Question 2 : Identifie les nombres contenus dans la table de 6, coche-les.", number: 2, reward: 30)
+world_one_quiz_one_question_three = Question.create!(quiz_id: world_one_quiz_one.id, title: "Question 3 : Coche la bonne réponse. Tu prends le quart de 24. Cela correspond à prendre la moitié de… ", number: 3, reward: 30)
 
 
 
@@ -57,9 +57,9 @@ world_one_quiz_two_question_three = Question.create!(quiz_id: world_one_quiz_two
 
 
 
-world_two_quiz_one_question_one = Question.create!(quiz_id: world_two_quiz_one.id, title: "Français niveau 1 - question 1 : Coche le synonyme de « manger »", number: 1, reward: 30)
-world_two_quiz_one_question_two = Question.create!(quiz_id: world_two_quiz_one.id, title: "Français niveau 1 - question 2 : Remplace le mot « avance » par son contraire. «L’araignée avance jusqu’à la lanterne.»", number: 2, reward: 30)
-world_two_quiz_one_question_three = Question.create!(quiz_id: world_two_quiz_one.id, title: "Français niveau 1 - question 3 : Retrouve les verbes dans la phrase suivante. « Mais comme il ne peut pondre ses œufs qu’en eau douce, il parcourt des milliers de kilomètres pour venir se reproduire dans une rivière.»", number: 3, reward: 30)
+world_two_quiz_one_question_one = Question.create!(quiz_id: world_two_quiz_one.id, title: "Question 1 : Coche le synonyme de « manger »", number: 1, reward: 30)
+world_two_quiz_one_question_two = Question.create!(quiz_id: world_two_quiz_one.id, title: "Question 2 : Remplace le mot « avance » par son contraire. «L’araignée avance jusqu’à la lanterne.»", number: 2, reward: 30)
+world_two_quiz_one_question_three = Question.create!(quiz_id: world_two_quiz_one.id, title: "Question 3 : Retrouve les verbes dans la phrase suivante. « Mais comme il ne peut pondre ses œufs qu’en eau douce, il parcourt des milliers de kilomètres pour venir se reproduire dans une rivière.»", number: 3, reward: 30)
 
 
 
