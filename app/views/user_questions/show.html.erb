@@ -4,5 +4,6 @@
 <%= @user_question.done_flag %>
 <br>
 <% @question.answers.each do |answer|%>
-<%= answer.content %>
+  <%= link_to "valider", check_answer_path(answer.id) %>
+  <%= answer.content %>
 <% end %>

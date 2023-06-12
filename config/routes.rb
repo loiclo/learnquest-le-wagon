@@ -8,8 +8,9 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :profil
+  get "/check_answer/:answer_id", to: "user_questions#check_answer", as: "check_answer"
 
+  resources :profil
   resources :shop
   # Defines the root path route ("/")
   # root "articles#index"
