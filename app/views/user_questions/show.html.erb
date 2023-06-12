@@ -4,14 +4,6 @@
 <%= @user_question.done_flag %>
 <br>
 <% @question.answers.each do |answer|%>
+  <%= link_to "valider", check_answer_path(answer.id) %>
   <%= answer.content %>
 <% end %>
-
-<% if @next_question.question.quiz.id != @user_question.question.quiz.id%>
-
-  <%= link_to "Resultats", result_index_path%>
-  <% else %>
-
-  <%= link_to "Prochaine Question", user_world_user_quiz_user_question_path(UserWorld.find_by(user: current_user, world:@user_question.question.quiz.world ), UserQuiz.find_by(user: current_user, quiz: @user_question.question.quiz), @next_question) %>
-  <% end %>
-<%= console %>
