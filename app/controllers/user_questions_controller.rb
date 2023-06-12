@@ -5,5 +5,7 @@ class UserQuestionsController < ApplicationController
   def show
     @user_question = UserQuestion.find(params[:id])
     @question = @user_question.question
+    @next_question_id = @user_question.id + 1
+    @next_question = UserQuestion.find(@next_question_id)
   end
 end

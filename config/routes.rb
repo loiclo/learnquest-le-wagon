@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   end
 
   resources :profil
-
   resources :shop
   # Defines the root path route ("/")
   # root "articles#index"
