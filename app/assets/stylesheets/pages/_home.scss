@@ -1,15 +1,42 @@
 // Specific CSS for your home-page
 .img-home1{
   text-align: center;
-  margin-top: 150px;
+  margin-top: 10px;
   z-index: 100;
-}
-
-.img-home2{
-  text-align: center;
-  margin-top: 50px;
 }
 
 body{
   overflow: hidden;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+
+@media screen and (max-width: 1920px){
+  .logo {
+    max-width: 115%;
+    margin-top: 35px;
+  }
+
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .logo {
+    max-width: 80%;
+    /* Ajustez la taille et la position selon vos besoins */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    max-width: 60%;
+    /* Ajustez la taille et la position selon vos besoins */
+  }
 }

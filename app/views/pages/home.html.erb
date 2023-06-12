@@ -17,11 +17,19 @@
 </div>
 
 <div class="img-home1">
-  <%= image_tag("learnquestlogo.png") %>
+  <%= image_tag("learnquestslogoandslogan.png", class: "logo") %>
+
 </div>
-<div class="img-home2">
-  <%= image_tag("learnquestslogan.png")%>
+
+<div class="bouton-co">
+  <% if user_signed_in? %>
+    <%= link_to "Commence ton aventure !", profil_index_path, class: "btn-2"  %>
+  <% else %>
+    <%= link_to "Connectes-toi !", new_user_session_path, class: "btn-2" %>
+  <% end %>
 </div>
+
+
 <div class="birds">
 
 	<div class="bird-container bird-container--one">
@@ -32,9 +40,3 @@
 		<div class="bird bird--two"></div>
 	</div>
 </div>
-
-<% if user_signed_in? %>
-<%= link_to "Commence ton aventure !", profil_index_path, class: "custom-btn btn-2"  %>
-<% else %>
-<%= link_to "Connecte toi !", new_user_session_path, class: "custom-btn btn-2" %>
-<% end %>
