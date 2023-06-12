@@ -13,12 +13,14 @@ class UserQuestionsController < ApplicationController
     @user_question = UserQuestion.find_by(question: @answer.question, user: current_user)
     @user_question.done_flag = @answer.good_answer_flag
     @user_question.try += 1
+    current_user.balance += @user_question.question.reward if @user_question.done_flag == true
+    current_user.save
     # si bon , update balance
 
     @user_question.save
     @next_question = next_question(@user_question.question)
     if @next_question.nil?
-      redirect_to root_path
+      redirect_to process_result_path(@user_question.question.quiz)
     else
       redirect_to user_world_user_quiz_user_question_path(UserWorld.find_by(world: @user_question.question.quiz.world, user: current_user), UserQuiz.find_by(quiz: @user_question.question.quiz, user: current_user), @next_question)
     end

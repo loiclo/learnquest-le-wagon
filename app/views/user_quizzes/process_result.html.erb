@@ -1,0 +1,11 @@
+hello
+<%= @quiz.title %>
+<% @user_questions.each do |user_question| %>
+  <br>
+  <%= user_question.question.title %>
+  <br>
+  <%= user_question.done_flag %>
+  <% if user_question.done_flag == true %>
+    +<%=user_question.question.reward  %>
+  <% end %>
+<% end %>
