@@ -1,4 +1,12 @@
 <h1>World show</h1>
-<% @user_world.world.quizzes.each do |quiz|%>
-<h1><%= link_to quiz.number, user_world_user_quiz_path(@user_world, UserQuiz.find_by(user:current_user, quiz: quiz)) %></h1>
-<% end %>
+<div class="parent">
+<div class="div1 text-center"><%= link_to @user_world.world.quizzes.first.number,  user_world_user_quiz_path(@user_world, UserQuiz.find_by(user:current_user, quiz: @user_world.world.quizzes.first)), class:"btn btn-primary div1" %></div>
+<div class="div2 text-center"><%= link_to @user_world.world.quizzes.last.number, user_world_user_quiz_path(@user_world, UserQuiz.find_by(user:current_user, quiz: @user_world.world.quizzes.last)), class:"btn btn-primary div2" %></div>
+<div class="div3 text-center"><%= link_to "3", root_path, class:"btn btn-primary div3" %></div>
+<div class="div4 text-center"><%= link_to "4", root_path, class:"btn btn-primary div4" %></div>
+<div class="div5 text-center"><%= link_to "5", root_path, class:"btn btn-primary div5" %></div>
+<div class="div6 text-center"><%= link_to "6", root_path, class:"btn btn-primary div6" %></div>
+<div class="div7 text-center"><%= link_to "7", root_path, class:"btn btn-primary div7" %></div>
+<div class="div8 text-center"><%= link_to "8", root_path, class:"btn btn-primary div8" %></div>
+<div class="div9 text-center"><%= link_to "9", root_path, class:"btn btn-primary div9" %></div>
+</div>

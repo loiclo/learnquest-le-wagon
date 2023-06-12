@@ -1,0 +1,16 @@
+.parent {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 48px;
+  }
+  .div1 { grid-area: 4 / 2 / 5 / 3; }
+  .div2 { grid-area: 5 / 3 / 6 / 4; }
+  .div3 { grid-area: 4 / 4 / 5 / 5; }
+  .div4 { grid-area: 3 / 5 / 4 / 6; }
+  .div5 { grid-area: 2 / 6 / 3 / 7; }
+  .div6 { grid-area: 3 / 7 / 4 / 8; }
+  .div7 { grid-area: 4 / 8 / 5 / 9; }
+  .div8 { grid-area: 3 / 9 / 4 / 10; }
+  .div9 { grid-area: 4 / 10 / 5 / 11; }
