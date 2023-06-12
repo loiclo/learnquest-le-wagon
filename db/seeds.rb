@@ -45,15 +45,15 @@ p "————#{Quiz.count} quizzes created--------"
 
 p "-------creating questions--------"
 
-world_one_quiz_one_question_one = Question.create!(quiz_id: world_one_quiz_one.id, title: "Question 1 : Donne le résultat de la multiplication suivante : 8 x 7 ", number: 1, reward: 30)
-world_one_quiz_one_question_two = Question.create!(quiz_id: world_one_quiz_one.id, title: "Question 2 : Donne le résultat de la division suivante : 56 / 8", number: 2, reward: 30)
-world_one_quiz_one_question_three = Question.create!(quiz_id: world_one_quiz_one.id, title: "Question 3 : Pour avoir 56 bonbons, combien de paquets de 8 bonbons dois-je acheter?", number: 3, reward: 30)
+world_one_quiz_one_question_one = Question.create!(quiz_id: world_one_quiz_one.id, title: "Question 1 : Donne le résultat de la multiplication suivante : 9 x 6", number: 1, reward: 10)
+world_one_quiz_one_question_two = Question.create!(quiz_id: world_one_quiz_one.id, title: "Question 2 : Donne le résultat de la division suivante : 54 / 6", number: 2, reward: 20)
+world_one_quiz_one_question_three = Question.create!(quiz_id: world_one_quiz_one.id, title: "Question 3 : Pour avoir 54 bonbons, combien de paquets de 6 bonbons dois-je acheter?", number: 3, reward: 30)
 
 
 
-world_one_quiz_two_question_one = Question.create!(quiz_id: world_one_quiz_two.id, title: "Maths niveau 2 - question 1 : intitulé de la question", number: 1, reward: 30)
-world_one_quiz_two_question_two = Question.create!(quiz_id: world_one_quiz_two.id, title: "Maths niveau 2 - question 2 : intitulé de la question", number: 2, reward: 30)
-world_one_quiz_two_question_three = Question.create!(quiz_id: world_one_quiz_two.id, title: "Maths niveau 2 - question 3 : intitulé de la question", number: 3, reward: 30)
+world_one_quiz_two_question_one = Question.create!(quiz_id: world_one_quiz_two.id, title: "Question 1 : Donne le résultat de la multiplication suivante : 8 x 7", number: 1, reward: 30)
+world_one_quiz_two_question_two = Question.create!(quiz_id: world_one_quiz_two.id, title: "Question 2 : Donne le résultat de la division suivante : 56 / 8", number: 2, reward: 30)
+world_one_quiz_two_question_three = Question.create!(quiz_id: world_one_quiz_two.id, title: "Question 3 : Pour avoir 56 bonbons, combien de paquets de 8 bonbons dois-je acheter?", number: 3, reward: 30)
 
 
 
