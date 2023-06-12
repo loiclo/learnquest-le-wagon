@@ -1,5 +1,3 @@
 <h1>Quizz show</h1>
 
 <%= link_to "Start", user_world_user_quiz_user_question_path(UserWorld.find_by(user: current_user, world:@user_quiz.quiz.world) ,@user_quiz , UserQuestion.find_by(user: current_user , question: @quiz.questions.first)) %>
-
-<%= console %>
