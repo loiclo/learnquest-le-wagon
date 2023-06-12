@@ -66,7 +66,7 @@
 
 }
 
-.btn-logout {
+.btn-Déconnexion {
 
 position: absolute;
 display: flex;
@@ -85,11 +85,11 @@ font-weight: bolder;
 font-size: 16px;
 
 }
-.btn-logout:before {
+.btn-Déconnexion:before {
   height: 0%;
   width: 2px;
 }
-.btn-logout:hover {
+.btn-Déconnexion:hover {
   box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
               -4px -4px 6px 0 rgba(116, 125, 136, .5),
     inset -4px -4px 6px 0 rgba(255,255,255,.2),
