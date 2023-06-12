@@ -17,26 +17,36 @@
   height: 80px;
   text-decoration: none;
   z-index: 2;
-  padding: 32px;
-  margin-bottom: 32px;
+  padding: 18px;
+  margin-bottom: -16px;
+
 }
 
 .card-world-index-container {
+  background-image: image-url("worlds_selection_pannel.png");
+  background-size: cover;
   width: 160px;
+  height: 204px;
   margin: 0 auto;
-  height: 240px;
   align-items: center;
   justify-content: space-evenly;
   background-color: rgba(0,0,0,0.0);
   z-index: 1;
-  position: absolute;
-  margin-top: 24px;
-  margin-left: 680px;
+  margin-top: 93px;
+  margin-left:640px;
 }
 
-.pannel {
-  margin: 0 auto;
-  margin-left: 640px;
-  position: absolute;
-  z-index: 0;
+@media screen and (max-width: 1920px){
+  .card-world-index-container {
+    margin-top: 255px;
+    margin-left: 924px;
+    width: 190px;
+    height: 240px;
+  }
+
+  .card-world-index {
+    font-size: 33px;
+    padding: 47px;
+    margin-left: 5px;
+  }
 }
