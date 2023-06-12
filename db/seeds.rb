@@ -45,14 +45,14 @@ p "————#{Quiz.count} quizzes created--------"
 
 p "-------creating questions--------"
 
-world_one_quiz_one_question_one = Question.create!(quiz_id: world_one_quiz_one.id, title: "Question 1 : Donne le résultat de la multiplication suivante : 9 x 6", number: 1, reward: 10)
-world_one_quiz_one_question_two = Question.create!(quiz_id: world_one_quiz_one.id, title: "Question 2 : Donne le résultat de la division suivante : 54 / 6", number: 2, reward: 20)
-world_one_quiz_one_question_three = Question.create!(quiz_id: world_one_quiz_one.id, title: "Question 3 : Pour avoir 54 bonbons, combien de paquets de 6 bonbons dois-je acheter?", number: 3, reward: 30)
+world_one_quiz_one_question_one = Question.create!(quiz_id: world_one_quiz_one.id, title: "Question 1 : Le nombre 327 se situe entre...", number: 1, reward: 10)
+world_one_quiz_one_question_two = Question.create!(quiz_id: world_one_quiz_one.id, title: "Question 2 : Quel nombre n'est pas un multiple de 6?", number: 2, reward: 20)
+world_one_quiz_one_question_three = Question.create!(quiz_id: world_one_quiz_one.id, title: "Question 3 : Tu prends le quart de 24. Cela correspond à prendre la moitié de...", number: 3, reward: 30)
 
 
 
-world_one_quiz_two_question_one = Question.create!(quiz_id: world_one_quiz_two.id, title: "Question 1 : Donne le résultat de la multiplication suivante : 8 x 7", number: 1, reward: 30)
-world_one_quiz_two_question_two = Question.create!(quiz_id: world_one_quiz_two.id, title: "Question 2 : Donne le résultat de la division suivante : 56 / 8", number: 2, reward: 30)
+world_one_quiz_two_question_one = Question.create!(quiz_id: world_one_quiz_two.id, title: "Question 1 : Donne le résultat de la multiplication suivante : 8 x 7", number: 1, reward: 10)
+world_one_quiz_two_question_two = Question.create!(quiz_id: world_one_quiz_two.id, title: "Question 2 : Donne le résultat de la division suivante : 56 / 8", number: 2, reward: 20)
 world_one_quiz_two_question_three = Question.create!(quiz_id: world_one_quiz_two.id, title: "Question 3 : Pour avoir 56 bonbons, combien de paquets de 8 bonbons dois-je acheter?", number: 3, reward: 30)
 
 
@@ -72,36 +72,36 @@ p "————#{Question.count} questions created--------"
 
 p "-------creating answers--------"
 
-world_one_quiz_one_question_one_answer_one = Answer.create!(question_id: world_one_quiz_one_question_one.id, content: "65", number: 1, good_answer_flag: false)
-world_one_quiz_one_question_one_answer_two = Answer.create!(question_id: world_one_quiz_one_question_one.id, content: "56", number: 2, good_answer_flag: true)
-world_one_quiz_one_question_one_answer_three = Answer.create!(question_id: world_one_quiz_one_question_one.id, content: "58", number: 3, good_answer_flag: false)
+world_one_quiz_one_question_one_answer_one = Answer.create!(question_id: world_one_quiz_one_question_one.id, content: "310 et 320", number: 1, good_answer_flag: false)
+world_one_quiz_one_question_one_answer_two = Answer.create!(question_id: world_one_quiz_one_question_one.id, content: "320 et 330", number: 2, good_answer_flag: true)
+world_one_quiz_one_question_one_answer_three = Answer.create!(question_id: world_one_quiz_one_question_one.id, content: "330 et 440", number: 3, good_answer_flag: false)
 
 
-world_one_quiz_one_question_two_answer_one = Answer.create!(question_id: world_one_quiz_one_question_two.id, content: "7", number: 1, good_answer_flag: false)
-world_one_quiz_one_question_two_answer_two = Answer.create!(question_id: world_one_quiz_one_question_two.id, content: "8", number: 2, good_answer_flag: true)
-world_one_quiz_one_question_two_answer_three = Answer.create!(question_id: world_one_quiz_one_question_two.id, content: "6", number: 3, good_answer_flag: false)
+world_one_quiz_one_question_two_answer_one = Answer.create!(question_id: world_one_quiz_one_question_two.id, content: "12", number: 1, good_answer_flag: false)
+world_one_quiz_one_question_two_answer_two = Answer.create!(question_id: world_one_quiz_one_question_two.id, content: "54", number: 2, good_answer_flag: false)
+world_one_quiz_one_question_two_answer_three = Answer.create!(question_id: world_one_quiz_one_question_two.id, content: "32", number: 3, good_answer_flag: true)
 
 
-world_one_quiz_one_question_three_answer_one = Answer.create!(question_id: world_one_quiz_one_question_three.id, content: "6 paquets", number: 1, good_answer_flag: false)
-world_one_quiz_one_question_three_answer_two = Answer.create!(question_id: world_one_quiz_one_question_three.id, content: "8 paquets", number: 2, good_answer_flag: false)
-world_one_quiz_one_question_three_answer_three = Answer.create!(question_id: world_one_quiz_one_question_three.id, content: "7 paquets", number: 3, good_answer_flag: true)
+world_one_quiz_one_question_three_answer_one = Answer.create!(question_id: world_one_quiz_one_question_three.id, content: "24", number: 1, good_answer_flag: false)
+world_one_quiz_one_question_three_answer_two = Answer.create!(question_id: world_one_quiz_one_question_three.id, content: "12", number: 2, good_answer_flag: true)
+world_one_quiz_one_question_three_answer_three = Answer.create!(question_id: world_one_quiz_one_question_three.id, content: "6", number: 3, good_answer_flag: false)
 
 
-world_one_quiz_two_question_one_answer_one = Answer.create!(question_id: world_one_quiz_two_question_one.id, content: "intitulé de la réponse 1", number: 1, good_answer_flag: false)
-world_one_quiz_two_question_one_answer_two = Answer.create!(question_id: world_one_quiz_two_question_one.id, content: "intitulé de la réponse 2", number: 2, good_answer_flag: true)
-world_one_quiz_two_question_one_answer_three = Answer.create!(question_id: world_one_quiz_two_question_one.id, content: "intitulé de la réponse 3", number: 3, good_answer_flag: false)
-
-
-
-world_one_quiz_two_question_two_answer_one = Answer.create!(question_id: world_one_quiz_two_question_two.id, content: "intitulé de la réponse 1", number: 1, good_answer_flag: false)
-world_one_quiz_two_question_two_answer_two = Answer.create!(question_id: world_one_quiz_two_question_two.id, content: "intitulé de la réponse 2", number: 2, good_answer_flag: true)
-world_one_quiz_two_question_two_answer_three = Answer.create!(question_id: world_one_quiz_two_question_two.id, content: "intitulé de la réponse 3", number: 3, good_answer_flag: false)
+world_one_quiz_two_question_one_answer_one = Answer.create!(question_id: world_one_quiz_two_question_one.id, content: "56", number: 1, good_answer_flag: true)
+world_one_quiz_two_question_one_answer_two = Answer.create!(question_id: world_one_quiz_two_question_one.id, content: "65", number: 2, good_answer_flag: false)
+world_one_quiz_two_question_one_answer_three = Answer.create!(question_id: world_one_quiz_two_question_one.id, content: "58", number: 3, good_answer_flag: false)
 
 
 
-world_one_quiz_two_question_three_answer_one = Answer.create!(question_id: world_one_quiz_two_question_three.id, content: "intitulé de la réponse 1", number: 1, good_answer_flag: false)
-world_one_quiz_two_question_three_answer_two = Answer.create!(question_id: world_one_quiz_two_question_three.id, content: "intitulé de la réponse 2", number: 2, good_answer_flag: true)
-world_one_quiz_two_question_three_answer_three = Answer.create!(question_id: world_one_quiz_two_question_three.id, content: "intitulé de la réponse 3", number: 3, good_answer_flag: false)
+world_one_quiz_two_question_two_answer_one = Answer.create!(question_id: world_one_quiz_two_question_two.id, content: "6", number: 1, good_answer_flag: false)
+world_one_quiz_two_question_two_answer_two = Answer.create!(question_id: world_one_quiz_two_question_two.id, content: "7", number: 2, good_answer_flag: true)
+world_one_quiz_two_question_two_answer_three = Answer.create!(question_id: world_one_quiz_two_question_two.id, content: "8", number: 3, good_answer_flag: false)
+
+
+
+world_one_quiz_two_question_three_answer_one = Answer.create!(question_id: world_one_quiz_two_question_three.id, content: "7 paquets", number: 1, good_answer_flag: true)
+world_one_quiz_two_question_three_answer_two = Answer.create!(question_id: world_one_quiz_two_question_three.id, content: "8 paquets", number: 2, good_answer_flag: false)
+world_one_quiz_two_question_three_answer_three = Answer.create!(question_id: world_one_quiz_two_question_three.id, content: "9 paquets", number: 3, good_answer_flag: false)
 
 
 world_two_quiz_one_question_one_answer_one = Answer.create!(question_id: world_two_quiz_one_question_one.id, content: "intitulé de la réponse 1", number: 1, good_answer_flag: false)
