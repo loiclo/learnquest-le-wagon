@@ -18,7 +18,7 @@ class UserQuestionsController < ApplicationController
     @user_question.save
     @next_question = next_question(@user_question.question)
     if @next_question.nil?
-      redirect_to process_result_path
+      redirect_to root_path
     else
       redirect_to user_world_user_quiz_user_question_path(UserWorld.find_by(world: @user_question.question.quiz.world, user: current_user), UserQuiz.find_by(quiz: @user_question.question.quiz, user: current_user), @next_question)
     end
