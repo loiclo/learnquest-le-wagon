@@ -3,6 +3,7 @@
 
     <div class="panneau">
       <%= image_tag("panneau.png", class: "panneau-img") %>
+      <div class="result-title">Resultats</div>
       <% @user_questions.each do |user_question| %>
       <%= user_question.question.title %>
       <%= user_question.done_flag %>
