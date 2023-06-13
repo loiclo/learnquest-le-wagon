@@ -1,11 +1,21 @@
-<h1>Question</h1>
-<%= @question.title %>
-<br>
-<%= @user_question.done_flag %>
-<br>
-<% @question.answers.each do |answer|%>
-  <%= link_to "valider", check_answer_path(answer.id) %>
-  <%= answer.content %>
-<% end %>
+
+<div class="pannel-place">
+
+  <div class="panneau">
+    <%= image_tag("panneau.png", class: "panneau-img") %>
+    <div class="quiz-name"><%= @question.quiz.title %></div>
+    <div class="question-title"><%= @question.title %></div>
+    <div class="answers">
+      <% @question.answers.each do |answer|%>
+      <%= link_to "valider", check_answer_path(answer.id)%>
+      <div class="answer"><%= answer.content %></div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
 
 <% content_for :body_class, 'imgbackgroundworldshow' %>
