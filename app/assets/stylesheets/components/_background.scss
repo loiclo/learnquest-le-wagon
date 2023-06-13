@@ -33,3 +33,10 @@ body.imgbackgroundprofil::after {
     transform: translateX(-100%);
   }
 }
+
+body.imgbackgroundworldshow{
+  background-image: url('./worldshow.png');
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
