@@ -1,9 +1,23 @@
+<div class="birds">
 
-<div class="panneau">
-  <%= image_tag("panneau.png", class: "panneau-img") %>
-  <div class="quiz-name"><%= @user_quiz.quiz.title %></div>
+	<div class="bird-container bird-container--one">
+		<div class="bird bird--one"></div>
+	</div>
 
-  <%= link_to "Commencer", user_world_user_quiz_user_question_path(UserWorld.find_by(user: current_user, world:@user_quiz.quiz.world) ,@user_quiz , UserQuestion.find_by(user: current_user , question: @quiz.questions.first)), class: "custom-btn-start-qs btn-start-qs" %>
-
-  <% content_for :body_class, 'imgbackgroundworldshow' %>
+	<div class="bird-container bird-container--two">
+		<div class="bird bird--two"></div>
+	</div>
 </div>
+
+
+  <div class="pannel-place">
+
+    <div class="panneau">
+      <%= image_tag("panneau.png", class: "panneau-img") %>
+      <div class="quiz-name"><%= @user_quiz.quiz.title %></div>
+
+      <%= link_to "Commencer", user_world_user_quiz_user_question_path(UserWorld.find_by(user: current_user, world:@user_quiz.quiz.world) ,@user_quiz , UserQuestion.find_by(user: current_user , question: @quiz.questions.first)), class: "custom-btn-start-qs btn-start-qs" %>
+
+      <% content_for :body_class, 'imgbackgroundworldshow' %>
+    </div>
+  </div>
