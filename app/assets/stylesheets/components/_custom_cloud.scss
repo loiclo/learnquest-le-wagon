@@ -1,0 +1,60 @@
+// app/assets/stylesheets/custom.css.scss
+
+.imgbackgroundprofil {
+  position: relative;
+  overflow: hidden;
+}
+
+.backgroundprep {
+  position: relative;
+  z-index: 0;
+}
+
+.arbreg-montagned {
+  position: relative;
+  z-index: 2;
+}
+
+.nuagerdo {
+  position: relative;
+  z-index: 1;
+  animation: moveNuage1 105s linear infinite;
+}
+
+@keyframes moveNuage1 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+// body.imgbackgroundprofil {
+//   background-image: url('./arbreg-montagned.png'), url('./backgroundprep.png');
+//   overflow: hidden;
+// }
+
+// .nuage {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 250%;
+//   height: 150%;
+//   background-image: url('./nuagerdo.png');
+//   background-repeat: no-repeat;
+//   background-size: 66% auto; /* ou background-size: cover; */
+//   animation: moveNuage1 105s linear infinite;
+//   z-index: 1; /* Valeur inférieure à celle du corps (body) */
+// }
+
+// @keyframes moveNuage1 {
+//   0% {
+//     transform: translateX(0%);
+//   }
+//   100% {
+//     transform: translateX(-100%);
+//   }
+// }
