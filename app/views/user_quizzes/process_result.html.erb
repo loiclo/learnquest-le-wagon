@@ -1,11 +1,19 @@
-hello
-<%= @quiz.title %>
-<% @user_questions.each do |user_question| %>
-  <br>
-  <%= user_question.question.title %>
-  <br>
-  <%= user_question.done_flag %>
-  <% if user_question.done_flag == true %>
-    +<%=user_question.question.reward  %>
-  <% end %>
-<% end %>
+
+  <div class="pannel-place">
+
+    <div class="panneau">
+      <%= image_tag("panneau.png", class: "panneau-img") %>
+      <div class="result-title">Resultats</div>
+      <% @user_questions.each do |user_question| %>
+      <%= user_question.question.title %>
+      <%= user_question.done_flag %>
+      <% if user_question.done_flag == true %>
+        +<%=user_question.question.reward  %>
+      <% end %>
+    <% end %>
+    </div>
+  </div>
+
+
+
+<% content_for :body_class, 'imgbackgroundworldshow' %>

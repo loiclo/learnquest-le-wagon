@@ -18,6 +18,6 @@
 
       <%= link_to "Commencer", user_world_user_quiz_user_question_path(UserWorld.find_by(user: current_user, world:@user_quiz.quiz.world) ,@user_quiz , UserQuestion.find_by(user: current_user , question: @quiz.questions.first)), class: "custom-btn-start-qs btn-start-qs" %>
 
-      <% content_for :body_class, 'imgbackgroundworldshow' %>
     </div>
   </div>
+<% content_for :body_class, 'imgbackgroundworldshow' %>
