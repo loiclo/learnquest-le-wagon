@@ -4,39 +4,3 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-body.imgbackgroundprofil {
-  background-image: url('./arbreg-montagned.png'), url('./backgroundprep.png');
-  overflow: hidden;
-}
-
-body.imgbackgroundprofil::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 250%;
-  height: 150%;
-  background-image: url('./nuagerdo.png');
-  background-repeat: no-repeat;
-  margin-top: 2px;
-  background-size: 68% auto; /* ou background-size: cover; */
-  animation: moveNuage1 105s linear infinite;
-}
-
-
-@keyframes moveNuage1 {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-body.imgbackgroundworldshow{
-  background-image: url('./worldshow.png');
-  background-position: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
