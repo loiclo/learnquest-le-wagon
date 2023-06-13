@@ -1,17 +1,38 @@
+<div class="birds">
+
+	<div class="bird-container bird-container--one">
+		<div class="bird bird--one"></div>
+	</div>
+
+	<div class="bird-container bird-container--two">
+		<div class="bird bird--two"></div>
+	</div>
+</div>
+
+
+
 
 <div class="pannel-place">
 
   <div class="panneau">
     <%= image_tag("panneau.png", class: "panneau-img") %>
-    <div class="quiz-name"><%= @question.quiz.title %></div>
+    <div class="question-number"><%= @question.number %></div>
     <div class="question-title"><%= @question.title %></div>
     <div class="answers">
-      <% @question.answers.each do |answer|%>
-      <%= link_to "valider", check_answer_path(answer.id)%>
-      <div class="answer"><%= answer.content %></div>
+      <%= form_with url:check_answer_path(@question.id) do |form|%>
+        <% @question.answers.each do |answer|%>
+          <div class="answer">
+            <%= answer.content %>
+          </div>
+          <%= form.radio_button :answer, answer.id %>
+          <%# <%= link_to "valider", check_answer_path(answer.id)%>
+
+        <% end %>
+        <%= form.submit "submit" %>
       <% end %>
     </div>
   </div>
+</div>
 </div>
 
 

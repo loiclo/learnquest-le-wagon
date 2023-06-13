@@ -9,7 +9,7 @@ class UserQuestionsController < ApplicationController
   end
 
   def check_answer
-    @answer = Answer.find(params[:answer_id])
+    @answer = Answer.find(params[:answer])
     @user_question = UserQuestion.find_by(question: @answer.question, user: current_user)
     @user_question.done_flag = @answer.good_answer_flag
     @user_question.try += 1

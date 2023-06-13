@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     end
   end
 
-  get "/check_answer/:answer_id", to: "user_questions#check_answer", as: "check_answer"
+  post "/check_answer/:answer_id", to: "user_questions#check_answer", as: "check_answer"
   get "/results/:quiz_id", to: "user_quizzes#process_result", as: "process_result"
   resources :profil
   resources :shop
