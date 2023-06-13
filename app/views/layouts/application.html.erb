@@ -6,22 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= favicon_link_tag 'faviconlq.png' %>
 
-
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
-   <body class="backgroundimage">
 
-  <%= render "shared/flashes" %>
-  <% unless controller_name == 'pages' && action_name == 'home' %>
-  <%= render "shared/navbar" %>
-  <% end %>
-
+  <body class="backgroundimage <%= yield(:body_class) %>">
+    <%= render "shared/flashes" %>
+    <% unless controller_name == 'pages' && action_name == 'home' %>
+      <%= render "shared/navbar" %>
+    <% end %>
 
     <%= yield %>
-    </div>
   </body>
 </html>
