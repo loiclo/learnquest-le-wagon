@@ -1,4 +1,5 @@
 .parent {
+  margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(11, 1fr);
   grid-template-rows: repeat(6, 1fr);
@@ -57,7 +58,7 @@ text-decoration: none;
 
 
 .btn-start-ws-grey {
-
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
