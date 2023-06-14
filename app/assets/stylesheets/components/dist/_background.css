@@ -1,5 +1,5 @@
 .backgroundimage {
-  background-image: url('./bg111111.png');
+  background-image: url("./bg111111.png");
   background-position: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -7,7 +7,7 @@
 }
 
 body.imgbackgroundprofil {
-  background-image: url('./arbreg-montagned.png'), url('./backgroundprep.png');
+  background-image: url("./arbreg-montagned.png"), url("./backgroundprep.png");
   overflow: hidden;
 }
 
@@ -18,13 +18,13 @@ body.imgbackgroundprofil::after {
   left: 0;
   width: 250%;
   height: 150%;
-  background-image: url('./nuagerdo.png');
+  background-image: url("./nuagerdo.png");
   background-repeat: no-repeat;
   margin-top: 2px;
-  background-size: 68% auto; /* ou background-size: cover; */
+  background-size: 68% auto;
+  /* ou background-size: cover; */
   animation: moveNuage1 105s linear infinite;
 }
-
 
 @keyframes moveNuage1 {
   0% {
@@ -34,16 +34,15 @@ body.imgbackgroundprofil::after {
     transform: translateX(-100%);
   }
 }
-
-body.imgbackgroundworldshow{
-  background-image: url('./worldshow.png');
+body.imgbackgroundworldshow {
+  background-image: url("./worldshow.png");
   background-position: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-body.imgbackgroundquizshow{
-  background-image: url('./quizshow.png');
+body.imgbackgroundquizshow {
+  background-image: url("./quizshow.png");
   background-position: fixed;
   background-repeat: no-repeat;
   background-size: cover;
