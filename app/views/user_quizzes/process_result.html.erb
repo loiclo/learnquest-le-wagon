@@ -12,6 +12,7 @@
           <% if user_question.done_flag == true %>
             <i class="fa-sharp fa-solid fa-check" style="color: #37ff00;"></i>
             <div class="qs-reward">+<%=user_question.question.reward  %></div>
+            <%= image_tag("piece.png", class: "reward-img") %>
             <% else %>
             <i class="fa-sharp fa-solid fa-xmark" style="color: #ff0000;"></i>
           <% end %>
