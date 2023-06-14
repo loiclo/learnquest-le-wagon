@@ -13,6 +13,13 @@ class UserQuizzesController < ApplicationController
     @quiz = Quiz.find(params[:quiz_id])
     @user_quiz = UserQuiz.find_by(user: current_user, quiz: @quiz)
     @user_questions = UserQuestion.where(user: current_user, question: @quiz.questions)
+
+
+    reward = @user_questions.sum do |user_question|
+      user_question.done_flag == true ? user_question.question.reward : 0
+    end
+    current_user.balance += reward
+    current_user.save
     count = @user_questions.count do |user_question|
       user_question.done_flag
     end
