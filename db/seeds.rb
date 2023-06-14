@@ -16,6 +16,10 @@ World.destroy_all
 p "-------all worlds destroyed-------"
 User.destroy_all
 p "-------all users destroyed-------"
+
+p "-------all avatars destroyed-------"
+Avatar.destroy_all
+
 puts "Database cleaned"
 
 p "-------creating users--------"
@@ -26,6 +30,27 @@ loic = User.create!(email: "loic@gmail.com", password: "123456", name: "Loic")
 eva = User.create!(email: "eva@gmail.com", password: "123456", name: "Eva")
 
 p "--------#{User.count} users created--------"
+
+
+p "-------creating avatars--------"
+
+chat_loic = Avatar.create!(name: "chat", img_url: "avatar2.pgn", price: 30)
+pirate_hugo = Avatar.create!(name: "pirate", img_url: "avatar3.png", price: 30)
+raton_guillaume = Avatar.create!(name: "raton", img_url: "avatar1.png", price: 100)
+canard_eva = Avatar.create!(name: "canard", img_url: "avatar4.png",price: 1030)
+
+p "--------#{User.count} avatars created--------"
+
+
+p "-------creating user avatar--------"
+
+UserAvatar.create!(user: hugo , avatar: chat_loic)
+UserAvatar.create!(user: guillaume, avatar: chat_loic)
+UserAvatar.create!(user: loic, avatar: chat_loic)
+UserAvatar.create!(user: eva, avatar: chat_loic)
+
+p "--------#{User.count} user avatar created--------"
+
 
 p "-------creating worlds--------"
 
