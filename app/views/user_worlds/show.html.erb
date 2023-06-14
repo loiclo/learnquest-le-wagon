@@ -1,17 +1,33 @@
 <div class="parent">
 <%# quiz-level-1-stars %>
 
-  <% if UserQuiz.find_by(user:current_user, quiz: @user_world.world.quizzes.first).done_flag == true %>
+
+<% if UserQuiz.find_by(user:current_user, quiz: @user_world.world.quizzes.first).star == 0 && UserQuiz.find_by(user:current_user, quiz: @user_world.world.quizzes.first).done_flag == false %>
   <div class="div1-stars">
-    <div class="fa-solid fa-star"></div>
-    <div class="fa-solid fa-star"></div>
-    <div class="fa-solid fa-star"></div>
+  </div>
+  <% elsif UserQuiz.find_by(user:current_user, quiz: @user_world.world.quizzes.first).star == 0 %>
+  <div class="div1-stars">
+    <div class="fa-solid fa-star medium"></div>
+    <div class="fa-solid fa-star big"></div>
+    <div class="fa-solid fa-star medium"></div>
+  </div>
+  <% elsif UserQuiz.find_by(user:current_user, quiz: @user_world.world.quizzes.first).star == 1 %>
+   <div class="div1-stars">
+    <div class="fa-solid yellow fa-star medium"></div>
+    <div class="fa-solid fa-star big"></div>
+    <div class="fa-solid fa-star medium"></div>
+  </div>
+   <% elsif UserQuiz.find_by(user:current_user, quiz: @user_world.world.quizzes.first).star == 2 %>
+   <div class="div1-stars">
+    <div class="fa-solid yellow fa-star medium"></div>
+    <div class="fa-solid fa-star big"></div>
+    <div class="fa-solid yellow fa-star medium"></div>
   </div>
   <% else %>
   <div class="div1-stars">
-    <div class="fa-solid fa-star"></div>
-    <div class="fa-solid fa-star big"></div>
-    <div class="fa-solid fa-star"></div>
+    <div class="fa-solid yellow fa-star medium"></div>
+    <div class="fa-solid yellow fa-star big"></div>
+    <div class="fa-solid yellow fa-star medium"></div>
   </div>
   <% end %>
 
@@ -21,6 +37,37 @@
   <div class="div1 text-center"><%= link_to @user_world.world.quizzes.first.number,  user_world_user_quiz_path(@user_world, UserQuiz.find_by(user:current_user, quiz: @user_world.world.quizzes.first)), class:"btn-start-ws-grey div1" %></div>
   <% else %>
   <div class="div1 text-center"><%= link_to @user_world.world.quizzes.first.number,  user_world_user_quiz_path(@user_world, UserQuiz.find_by(user:current_user, quiz: @user_world.world.quizzes.first)), class:"btn-start-ws div1" %></div>
+  <% end %>
+
+<%# quiz-level-2-stars %>
+
+  <% if UserQuiz.find_by(user:current_user, quiz: @user_world.world.quizzes.last).star == 0 && UserQuiz.find_by(user:current_user, quiz: @user_world.world.quizzes.last).done_flag == false %>
+  <div class="div2-stars">
+  </div>
+  <% elsif UserQuiz.find_by(user:current_user, quiz: @user_world.world.quizzes.last).star == 0 %>
+  <div class="div2-stars">
+    <div class="fa-solid fa-star medium"></div>
+    <div class="fa-solid fa-star big"></div>
+    <div class="fa-solid fa-star medium"></div>
+  </div>
+  <% elsif UserQuiz.find_by(user:current_user, quiz: @user_world.world.quizzes.last).star == 1 %>
+   <div class="div2-stars">
+    <div class="fa-solid yellow fa-star medium"></div>
+    <div class="fa-solid fa-star big"></div>
+    <div class="fa-solid fa-star medium"></div>
+  </div>
+   <% elsif UserQuiz.find_by(user:current_user, quiz: @user_world.world.quizzes.last).star == 2 %>
+   <div class="div2-stars">
+    <div class="fa-solid yellow fa-star medium"></div>
+    <div class="fa-solid fa-star big"></div>
+    <div class="fa-solid yellow fa-star medium"></div>
+  </div>
+  <% else %>
+  <div class="div2-stars">
+    <div class="fa-solid yellow fa-star medium"></div>
+    <div class="fa-solid yellow fa-star big"></div>
+    <div class="fa-solid yellow fa-star medium"></div>
+  </div>
   <% end %>
 
 <%# quiz-level-2 %>
