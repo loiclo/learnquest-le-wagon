@@ -15,6 +15,9 @@
 
   <body class="backgroundimage <%= yield(:body_class) %>">
     <%= render "shared/flashes" %>
+    <% unless (controller_name == 'pages' && action_name == 'home')%>
+    <%= render "shared/balance" %>
+    <% end %>
     <% unless (controller_name == 'pages' && action_name == 'home') || (controller_name == 'user_quizzes' && action_name == "show") || (controller_name == 'user_questions' && action_name == "show") || (controller_name == 'user_quizzes' && action_name == "process_result")%>
       <%= render "shared/navbar" %>
     <% end %>
