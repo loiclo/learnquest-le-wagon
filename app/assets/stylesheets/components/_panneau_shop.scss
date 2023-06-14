@@ -46,3 +46,21 @@
   right: -14%;
   text-align: center;
 }
+
+.inventory{
+  position:absolute;
+  top: 20%;
+  left: 10%;
+  width: 500px;
+  height: 500px;
+  background-color: white;
+}
+
+.buy-btn-place{
+  width: 150px;
+  cursor: pointer;
+  height: 60px;
+  position: absolute;
+  top: -6%;
+  left: -416%;
+}

@@ -1,6 +1,8 @@
 
+<div class="inventory">
 
 
+</div>
 
 
 
@@ -10,21 +12,22 @@
     <%= image_tag("flechegauche.png", class: "shop-fleches", data:{action:"click->shop#gauche"})%>
 
       <div class="shop-avatars">
-      <% @avatars.each do |avatar| %>
-        <%= image_tag(avatar.img_url, class: "shop-avatar d-none", data:{'shop-target'=>'avatar'})%>
+        <% @avatars.each do |avatar| %>
+          <%= image_tag(avatar.img_url, class: "shop-avatar d-none", data: { 'shop-target' => 'avatar' })%>
 
-        <div class="price-place">
+          <div class="price-place">
 
-        <div class="avatar-price d-none <%= if current_user.balance >= avatar.price
-         "price-green"
-          else
-          "price-red"
-           end%>" data-shop-target="price"><%= avatar.price %></div>
+          <div class="avatar-price d-none <%= if current_user.balance >= avatar.price
+          "price-green"
+            else
+            "price-red"
+            end%>" data-shop-target="price"><%= avatar.price %></div>
+          <div class="buy-btn-place d-none" data-action="click->shop#buyAvatar" data-avatar-id="<%= avatar.id %>" data-shop-target="btn" ></div>
         </div>
       <% end %>
 
       </div>
-    <%= image_tag("flechedroite.png", class: "shop-fleches", data:{action:"click->shop#droite"})%>
-  </div>
-    <%= image_tag("panneaumagasin.png", class: "panneau-shop", style: 'width:550px;')%>
+      <%= image_tag("flechedroite.png", class: "shop-fleches", data:{action:"click->shop#droite"})%>
     </div>
+    <%= image_tag("panneaumagasin.png", class: "panneau-shop", style: 'width:550px;')%>
+</div>
