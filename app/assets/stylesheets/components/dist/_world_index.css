@@ -8,18 +8,17 @@
   color: white;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.0);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.0);
-  background-color: rgba(0, 0, 0, 0.0);
-  border-color: rgba(0,0,0,0.0);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
   width: 160px;
   height: 80px;
   text-decoration: none;
   z-index: 2;
   padding: 18px;
   margin-bottom: -16px;
-
 }
 
 .card-world-index-container {
@@ -30,12 +29,14 @@
   margin: 0 auto;
   align-items: center;
   justify-content: space-evenly;
-  background-color: rgba(0,0,0,0.0);
+  background-color: rgba(0, 0, 0, 0);
   z-index: 1;
   margin-top: 93px;
   margin-left: 640px;
-  display: flex; /* Ajout de cette ligne */
-  flex-direction: row; /* Ajout de cette ligne */
+  display: flex;
+  /* Ajout de cette ligne */
+  flex-direction: row;
+  /* Ajout de cette ligne */
 }
 
 .avatar-profil {
@@ -48,16 +49,13 @@
   height: auto;
 }
 
-
 .toto {
   background-image: image-url("worlds_selection_pannel.png");
   background-size: cover;
   width: 200px;
   height: 231px;
   margin-bottom: 50px;
-
 }
-
 
 @media screen and (max-width: 1920px) {
   .card-world-index-container {
