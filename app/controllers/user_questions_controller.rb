@@ -14,6 +14,7 @@ class UserQuestionsController < ApplicationController
     @user_question.done_flag = @answer.good_answer_flag
     @user_question.try += 1
     current_user.balance += @user_question.question.reward if @user_question.done_flag == true
+    # update column star in user_quizzes after question has been answered correctly
     current_user.save
     # si bon , update balance
 
