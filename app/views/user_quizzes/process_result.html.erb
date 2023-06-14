@@ -17,8 +17,11 @@
             <i class="fa-sharp fa-solid fa-xmark" style="color: #ff0000;"></i>
           <% end %>
         </div>
-
       <% end %>
+      <div class="result-btns">
+        <%= link_to "Retour", user_world_path(UserWorld.find_by(user: current_user ,world: @quiz.world)), class:"result-world-btn custom-btn-world" %>
+        <%= link_to "Shop", shop_index_path, class:"result-shop-btn custom-btn-shop" %>
+      </div>
       </div>
     </div>
   </div>
