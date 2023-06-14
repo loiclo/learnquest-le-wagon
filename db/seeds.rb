@@ -34,7 +34,7 @@ p "--------#{User.count} users created--------"
 
 p "-------creating avatars--------"
 
-chat_loic = Avatar.create!(name: "chat", img_url: "avatar2.pgn", price: 30)
+chat_loic = Avatar.create!(name: "chat", img_url: "avatar2.png", price: 30)
 pirate_hugo = Avatar.create!(name: "pirate", img_url: "avatar3.png", price: 30)
 raton_guillaume = Avatar.create!(name: "raton", img_url: "avatar1.png", price: 100)
 canard_eva = Avatar.create!(name: "canard", img_url: "avatar4.png",price: 1030)

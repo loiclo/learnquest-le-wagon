@@ -1,0 +1,22 @@
+.shop-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop-avatar {
+
+  width: 150px;
+}
+
+.shop-fleches{
+  width: 80px;
+  height: 80px;
+}
+
+.shop-center{
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
