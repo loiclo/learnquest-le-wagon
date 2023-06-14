@@ -55,5 +55,6 @@ export default class extends Controller {
     console.log(event.currentTarget)
     const avatarId = event.currentTarget.dataset.avatarId;
     console.log(avatarId);
+
   }
 }
