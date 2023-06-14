@@ -16,19 +16,25 @@
 
   <div class="panneau">
     <%= image_tag("panneau.png", class: "panneau-img") %>
-    <div class="question-number"><%= @question.number %></div>
-    <div class="question-title"><%= @question.title %></div>
-    <div class="answers">
+    <div class="question-number">Question : <%= @question.number %></div>
+    <div class="head">
+      <div class="question-title"><%= @question.title %></div>
+    </div>
+    <div class="answers" data-controller="quiz">
       <%= form_with url:check_answer_path(@question.id) do |form|%>
         <% @question.answers.each do |answer|%>
           <div class="answer">
-            <%= answer.content %>
+            <div class="answer-imgs" data-action="click->quiz#test" data-quiz-target="imgs">
+              <%= image_tag("bouton.png", class:"answer-btn")%>
+              <%= image_tag("boutonactive.png", class:"answer-btn d-none")%>
+            </div>
+            <%= form.radio_button :answer, answer.id , data: {"quiz-target"=>"radio"}, class:"d-none"%>
+            <div class="answer-text"><%= answer.content %></div>
           </div>
-          <%= form.radio_button :answer, answer.id %>
           <%# <%= link_to "valider", check_answer_path(answer.id)%>
 
         <% end %>
-        <%= form.submit "submit" %>
+        <%= form.submit "Valider", class:"submit-btn custom-btn-submit" %>
       <% end %>
     </div>
   </div>

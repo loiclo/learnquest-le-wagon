@@ -23,7 +23,7 @@
 
 <div class="bouton-co">
   <% if user_signed_in? %>
-    <%= link_to "Commence ton aventure !", profil_index_path, class: "btn-2"  %>
+    <%= link_to "Commence ton aventure !", user_worlds_path, class: "btn-2"  %>
   <% else %>
     <%= link_to "Connectes-toi !", new_user_session_path, class: "btn-2" %>
   <% end %>
