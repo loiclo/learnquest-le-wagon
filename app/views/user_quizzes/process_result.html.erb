@@ -4,13 +4,21 @@
     <div class="panneau">
       <%= image_tag("panneau.png", class: "panneau-img") %>
       <div class="result-title">Resultats</div>
-      <% @user_questions.each do |user_question| %>
-      <%= user_question.question.title %>
-      <%= user_question.done_flag %>
-      <% if user_question.done_flag == true %>
-        +<%=user_question.question.reward  %>
+      <div class="result-infos">
+
+        <% @user_questions.each do |user_question| %>
+        <div class="result-info">
+          <div class="qsnb">Question : <%= user_question.question.number %></div>
+          <% if user_question.done_flag == true %>
+            <i class="fa-sharp fa-solid fa-check" style="color: #37ff00;"></i>
+            <div class="qs-reward">+<%=user_question.question.reward  %></div>
+            <% else %>
+            <i class="fa-sharp fa-solid fa-xmark" style="color: #ff0000;"></i>
+          <% end %>
+        </div>
+
       <% end %>
-    <% end %>
+      </div>
     </div>
   </div>
 
