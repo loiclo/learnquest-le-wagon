@@ -1,4 +1,4 @@
-.result-infos{
+.result-infos {
   position: absolute;
   top: 33%;
   left: 30%;
@@ -6,36 +6,36 @@
   height: 178px;
   display: flex;
   flex-direction: column;
-
 }
-.result-info{
+
+.result-info {
   margin-bottom: 20px;
   display: flex;
   width: 300px;
 }
 
-.qsnb{
-  font-family: ''Kalam', cursive';
+.qsnb {
+  font-family: "" Kalam ", cursive";
   color: #FFFFFF;
   text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
   font-size: 30px;
 }
 
-.fa-xmark{
+.fa-xmark {
   margin-top: 3px;
   margin-left: 15px;
   font-size: 40px;
   text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.fa-check{
+.fa-check {
   margin-top: 3px;
   margin-left: 15px;
   font-size: 40px;
   text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.qs-reward{
+.qs-reward {
   font-family: "'Kalam', cursive";
   font-size: 30px;
   color: yellow;
@@ -43,7 +43,7 @@
   margin-left: 15px;
 }
 
-.reward-img{
+.reward-img {
   width: 20px;
   height: 20px;
   margin-top: 15px;
@@ -59,19 +59,13 @@
   justify-content: space-between;
 }
 
-// .result-btn-worlds{
-//   width: 150px;
-//   height: 50px;
-//   background-color: white;
-
-// }
 .custom-btn-world {
   width: 150px;
   height: 50px;
   color: #fff;
   border-radius: 5px;
   padding: 10px 25px;
-  font-family: 'Kalam', cursive;
+  font-family: "Kalam", cursive;
   font-weight: 500;
   background: transparent;
   text-decoration: none;
@@ -79,39 +73,33 @@
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
-
 }
 
 .result-world-btn {
-
-display: flex;
-align-items: center;
-justify-content: center;
-background: linear-gradient(180deg, #FFDA16 0%, #FF8A00 100%);
-box-shadow: 0px 6px 4px #D75B01;
-border-radius: 20px;
-border: none;
-height: 70x;
-width: 130px;
-color: #B65210;
-font-weight: bolder;
-font-size: x-large;
-font-family: "'Kalam', cursive";
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #FFDA16 0%, #FF8A00 100%);
+  box-shadow: 0px 6px 4px #D75B01;
+  border-radius: 20px;
+  border: none;
+  height: 70x;
+  width: 130px;
+  color: #B65210;
+  font-weight: bolder;
+  font-size: x-large;
+  font-family: "'Kalam', cursive";
 }
+
 .result-world-btn:before {
   height: 0%;
   width: 2px;
 }
+
 .result-world-btn:hover {
-  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-              -4px -4px 6px 0 rgba(116, 125, 136, .5),
-    inset -4px -4px 6px 0 rgba(255,255,255,.2),
-    inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.5), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
 }
 
 .custom-btn-shop {
@@ -120,7 +108,7 @@ font-family: "'Kalam', cursive";
   color: #fff;
   border-radius: 5px;
   padding: 10px 25px;
-  font-family: 'Kalam', cursive;
+  font-family: "Kalam", cursive;
   font-weight: 500;
   background: transparent;
   text-decoration: none;
@@ -128,61 +116,55 @@ font-family: "'Kalam', cursive";
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
-
 }
 
 .result-shop-btn {
-
-display: flex;
-align-items: center;
-justify-content: center;
-background: linear-gradient(180deg, #FFDA16 0%, #FF8A00 100%);
-box-shadow: 0px 6px 4px #D75B01;
-border-radius: 20px;
-border: none;
-height: 70x;
-width: 130px;
-color: #B65210;
-font-weight: bolder;
-font-size: x-large;
-font-family: "'Kalam', cursive";
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #FFDA16 0%, #FF8A00 100%);
+  box-shadow: 0px 6px 4px #D75B01;
+  border-radius: 20px;
+  border: none;
+  height: 70x;
+  width: 130px;
+  color: #B65210;
+  font-weight: bolder;
+  font-size: x-large;
+  font-family: "'Kalam', cursive";
 }
+
 .result-shop-btn:before {
   height: 0%;
   width: 2px;
 }
+
 .result-shop-btn:hover {
-  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-              -4px -4px 6px 0 rgba(116, 125, 136, .5),
-    inset -4px -4px 6px 0 rgba(255,255,255,.2),
-    inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.5), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
 }
 
-.big-pr{
-  font-family: 'Kalam', cursive;
+.big-pr {
+  font-family: "Kalam", cursive;
   font-size: 140px;
   margin-bottom: 5px;
 }
 
-.medium-pr{
-  font-family: 'Kalam', cursive;
+.medium-pr {
+  font-family: "Kalam", cursive;
   font-size: 80px;
 }
 
-.star-container{
+.star-container {
   position: relative;
   width: 47%;
-
 }
+
 .div-stars-pr {
   display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    position: absolute;
-    top: -56px;
+  justify-content: space-around;
+  align-items: flex-end;
+  position: absolute;
+  top: -56px;
 }

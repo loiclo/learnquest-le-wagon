@@ -1,7 +1,25 @@
+<div class="shop-index">
 
-<div class="inventory-container">
+  <div class="inventory-container" data-controller="inventory">
+    <div class="panneau inventory-img ">
+      <div class="inventory-avatars" >
+        <% current_user.user_avatars.each do |user_avatar| %>
+          <div class="avatar-card" data-action="click->inventory#process">
+            <% url = user_avatar.avatar.img_url %>
+            <%= image_tag(url, class:"avatar-img") %>
+          </div>
+        <% end %>
+      </div>
+    </div>
 
-</div>
+  </div>
+  <div class="shopo">
+    <div class="shop-container" data-controller="shop" >
+      <div class="shop-center">
+        <%= image_tag("flechegauche.png", class: "shop-fleches", data:{action:"click->shop#gauche"})%>
+          <div class="shop-avatars">
+            <% @avatars.each do |avatar| %>
+              <%= image_tag(avatar.img_url, class: "shop-avatar d-none", data: { 'shop-target' => 'avatar' })%>
 
 <div class="shop-container" data-controller="shop" >
   <div class="shop-center">
