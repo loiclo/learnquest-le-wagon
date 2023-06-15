@@ -92,18 +92,14 @@ p "-------creating quizzes--------"
 world_one_quiz_one = Quiz.create!(world_id: world_one.id, title: "Maths niveau 1", description: "Bienvenue dans le quizz Maths niveau 1", number: 1, reward: 100)
 world_one_quiz_two = Quiz.create!(world_id: world_one.id, title: "Maths niveau 2", description: "Bienvenue dans le quizz Maths niveau 2", number: 2, reward: 100)
 
-# 7.times do |i|
-#   Quiz.create!(world_id: world_one.id, title: "Quizz Maths", description: "Bienvenue dans le quizz Maths ", number: i+2, reward: 100)
-# end
-
 
 world_two_quiz_one = Quiz.create!(world_id: world_two.id, title: "Français niveau 1", description: "Bienvenue dans le quizz Français niveau 1", number: 1, reward: 100)
 world_two_quiz_two = Quiz.create!(world_id: world_two.id, title: "Français niveau 2", description: "Bienvenue dans le quizz Français niveau 2", number: 2, reward: 100)
 
-# 7.times do |i|
-#   Quiz.create!(world_id: world_two.id, title: "Quizz Français", description: "Bienvenue dans le quizz Français ", number: i+2, reward: 100)
-# end
 
+# last quiz created
+# On crée un quiz qu'il faudra remplacer a l'avenir par des vrais quizzes
+Quiz.create!(world_id: world_one.id, title: "Quizz Maths test", description: "Bienvenue dans le quizz Maths ", number: 3, reward: 100)
 
 
 p "————#{Quiz.count} quizzes created--------"
@@ -217,23 +213,17 @@ p "-------creating user_quizzes--------"
 hugo_user_world_one_quiz_one = UserQuiz.create!(user_id: hugo.id, quiz_id: world_one_quiz_one.id, done_flag: false)
 hugo_user_world_one_quiz_two = UserQuiz.create!(user_id: hugo.id, quiz_id: world_one_quiz_two.id, done_flag: false)
 
-# 7.times do
-#   UserQuiz.create!(user_id: hugo.id, quiz_id: Quiz.last.id, done_flag: false)
-# end
+
+# on crée 7 userquiz (pour arriver a un total de 9) afin de les afficher proprement.
+# c'est 7 fois le meme quizz (créé plus haut)
+# a modifier par la suite
+7.times do
+  UserQuiz.create!(user_id: hugo.id, quiz_id: Quiz.last.id, done_flag: false)
+end
+
 
 hugo_user_world_two_quiz_one = UserQuiz.create!(user_id: hugo.id, quiz_id: world_two_quiz_one.id, done_flag: false)
 hugo_user_world_two_quiz_two = UserQuiz.create!(user_id: hugo.id, quiz_id: world_two_quiz_two.id, done_flag: false)
-
-
-
-
-
-
-
-
-
-
-
 
 
 

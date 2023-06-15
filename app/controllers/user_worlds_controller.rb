@@ -10,6 +10,6 @@ class UserWorldsController < ApplicationController
 
   def show
     @user_world = UserWorld.find(params[:id])
-    @user_quizzes = @user_world.user_quizzes
+    @user_quizzes = @user_world.user_quizzes.order(:created_at)
   end
 end

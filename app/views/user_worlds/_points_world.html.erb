@@ -30,10 +30,17 @@
 
 
 <%# quiz-level-1 %>
-<% if user_quiz.done_flag %>
-  <div class="div<%=index%> text-center"><%= link_to index,  user_world_user_quiz_path(@user_world, user_quiz), class:"btn-start-ws-grey div1" %>
+
+<% if user_quiz.questions.empty? %>
+  <div class="div<%=index%> text-center"><%= link_to index,  root_path, class:"btn-start-ws" %>
   </div>
 <% else %>
-  <div class="div<%=index%> text-center"><%= link_to index,  user_world_user_quiz_path(@user_world, user_quiz), class:"btn-start-ws div1" %>
-  </div>
+  <% if user_quiz.done_flag %>
+    <div class="div<%=index%> text-center"><%= link_to index,  user_world_user_quiz_path(@user_world, user_quiz), class:"btn-start-ws-grey div1" %>
+    </div>
+  <% else %>
+    <div class="div<%=index%> text-center"><%= link_to index,  user_world_user_quiz_path(@user_world, user_quiz), class:"btn-start-ws div1" %>
+    </div>
+  <% end %>
+
 <% end %>
