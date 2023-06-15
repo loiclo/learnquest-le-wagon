@@ -64,8 +64,8 @@ world_two = World.create!(title: "Français", description: "Bienvenue dans le mo
 p "————#{World.count} worlds created--------"
 
 p "-------creating quests--------"
-world_one_quest_one = Quest.create!(title: "Complete 1 quiz dans le monde des maths", world_id: world_one.id, reward: 200)
-world_two_quest_one = Quest.create!(title: "Complete 1 quiz dans le monde du français", world_id: world_two.id, reward: 200)
+world_one_quest_one = Quest.create!(title: "Fais un quiz de Maths", world_id: world_one.id, reward: 200)
+world_two_quest_one = Quest.create!(title: "Fais un quiz de Français", world_id: world_two.id, reward: 200)
 
 p "--------#{Quest.count} quests created--------"
 
