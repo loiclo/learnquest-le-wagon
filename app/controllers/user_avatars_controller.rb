@@ -18,8 +18,11 @@ class UserAvatarsController < ApplicationController
     end
   end
   def change_avatar
-    raise
     @user_avatars = current_user.user_avatars.all
-    @equiped_avatar = @user_avatars.where(equiped: true)
+    @equiped_avatar = @user_avatars.where(equiped: true).first
+    @equiped_avatar.update(equiped: false) if @equiped_avatar
+    @user_avatar = UserAvatar.find(params[:id])
+    @user_avatar.update(equiped: true)
+    redirect_to shop_index_path
   end
 end

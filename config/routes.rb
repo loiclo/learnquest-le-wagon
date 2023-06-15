@@ -8,7 +8,8 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :user_avatars , only: [:create, :change_avatar]
+  resources :user_avatars , only: [:create]
+  patch "/user_avatars/:id", to: "user_avatars#change_avatar", as: "change_avatar"
   post "/check_answer/:answer_id", to: "user_questions#check_answer", as: "check_answer"
   get "/results/:quiz_id", to: "user_quizzes#process_result", as: "process_result"
   resources :profil
