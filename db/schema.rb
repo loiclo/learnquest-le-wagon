@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_15_095514) do
+
+ActiveRecord::Schema[7.0].define(version: 2023_06_15_121759) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -68,6 +70,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_15_095514) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "purchased", default: false
+    t.boolean "equiped", default: false
     t.index ["avatar_id"], name: "index_user_avatars_on_avatar_id"
     t.index ["user_id"], name: "index_user_avatars_on_user_id"
   end

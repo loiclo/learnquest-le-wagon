@@ -1,20 +1,19 @@
-<div class="shop-index">
+<div class="shop-index" data-controller="shop">
 
 
   <div class="panneau inventory-img" data-controller="inventory">
-    <div class="inventory-avatars" >
+    <div class="inventory-avatars" data-shop-target="inventory"  >
       <% current_user.user_avatars.each do |user_avatar| %>
-        <div class="avatar-card" data-action="click->inventory#process">
-          <% url = user_avatar.avatar.img_url %>
-          <%= image_tag(url, class:"avatar-img") %>
-        </div>
+
+        <%= render 'user_avatars/avatar_card', user_avatar: %>
+
       <% end %>
     </div>
   </div>
 
 
 
-<div class="shop-container" data-controller="shop" >
+  <div class="shop-container">
   <div class="shop-center">
     <%= image_tag("flechegauche.png", class: "shop-fleches", data:{action:"click->shop#gauche"})%>
     <div class="shop-avatars">
@@ -37,7 +36,7 @@
               <p>Acheter</p>
             </div>
               <% else %>
-                <div class="avatar-price price-red">
+                  <div class="avatar-price price-red" data-shop-target="price">
                 <%= avatar.price %>
                 </div>
                 <div class="shop-buy-button">
@@ -56,5 +55,6 @@
       <%= form.text_field :avatar_id , data: {'shop-target' => 'avatarid'}%>
       <%= form.submit %>
     <% end  %>
+    </div>
   </div>
 </div>
