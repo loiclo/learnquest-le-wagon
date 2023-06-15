@@ -1,0 +1,39 @@
+<%# quiz-level-1-stars %>
+<% if user_quiz.star == 0 && user_quiz.done_flag == false %>
+  <div class="div<%=index%>-stars">
+  </div>
+<% elsif user_quiz.star == 0 %>
+  <div class="div<%=index%>-stars">
+    <div class="fa-solid fa-star medium"></div>
+    <div class="fa-solid fa-star big"></div>
+    <div class="fa-solid fa-star medium"></div>
+  </div>
+<% elsif user_quiz.star == 1 %>
+   <div class="div<%=index%>-stars">
+    <div class="fa-solid yellow fa-star medium"></div>
+    <div class="fa-solid fa-star big"></div>
+    <div class="fa-solid fa-star medium"></div>
+  </div>
+<% elsif user_quiz.star == 2 %>
+   <div class="div<%=index%>-stars">
+    <div class="fa-solid yellow fa-star medium"></div>
+    <div class="fa-solid fa-star big"></div>
+    <div class="fa-solid yellow fa-star medium"></div>
+  </div>
+<% else %>
+  <div class="div<%=index%>-stars">
+    <div class="fa-solid yellow fa-star medium"></div>
+    <div class="fa-solid yellow fa-star big"></div>
+    <div class="fa-solid yellow fa-star medium"></div>
+  </div>
+<% end %>
+
+
+<%# quiz-level-1 %>
+<% if user_quiz.done_flag %>
+  <div class="div<%=index%> text-center"><%= link_to index,  user_world_user_quiz_path(@user_world, user_quiz), class:"btn-start-ws-grey div1" %>
+  </div>
+<% else %>
+  <div class="div<%=index%> text-center"><%= link_to index,  user_world_user_quiz_path(@user_world, user_quiz), class:"btn-start-ws div1" %>
+  </div>
+<% end %>
