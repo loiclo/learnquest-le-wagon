@@ -36,17 +36,19 @@
 }
 
 .avatar-price {
-  font-family: "Kiddosy regular";
+  font-family: "'Kalam', cursive";
   font-size: 30px;
   text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .price-green {
   color: greenyellow;
+  font-family: "Kalam", cursive;
 }
 
 .price-red {
   color: red;
+  font-family: "Kalam", cursive;
 }
 
 .price-place {
@@ -64,5 +66,6 @@
   left: 10%;
   width: 500px;
   height: 500px;
-  background-color: white;
+  background-color: black;
+  opacity: 0.5;
 }
