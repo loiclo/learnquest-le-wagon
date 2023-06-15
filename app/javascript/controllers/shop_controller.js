@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="shop"
 export default class extends Controller {
-  static targets = ["avatar", "price", "btn", "avatarid", "form"]
+  static targets = ["avatar", "price", "btn", "avatarid", "form", "inventory"]
   connect() {
     this.avatarTarget.classList.remove("d-none")
 
@@ -39,7 +39,6 @@ export default class extends Controller {
   }
 
   buyAvatar(){
-    console.log(this.currentAvatarId())
     const avatarId = this.currentAvatarId();
 
     this.avataridTarget.value = avatarId
@@ -51,7 +50,10 @@ export default class extends Controller {
     })
       .then(response => response.json())
       .then((data) => {
-        console.log(data)
+        if(!data.status){
+          this.inventoryTarget.insertAdjacentHTML("beforeend", data.avatar)
+          this.priceTarget.innerHTML = ""
+        }
       })
   }
 
