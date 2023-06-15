@@ -1,32 +1,19 @@
 <div class="shop-index">
 
-  <div class="inventory-container" data-controller="inventory">
-    <div class="panneau inventory-img ">
-      <div class="inventory-avatars" >
-        <% current_user.user_avatars.each do |user_avatar| %>
-          <div class="avatar-card" data-action="click->inventory#process">
-            <% url = user_avatar.avatar.img_url %>
-            <%= image_tag(url, class:"avatar-img") %>
-          </div>
-        <% end %>
-      </div>
+
+  <div class="panneau inventory-img" data-controller="inventory">
+    <div class="inventory-avatars" >
+      <% current_user.user_avatars.each do |user_avatar| %>
+        <div class="avatar-card" data-action="click->inventory#process">
+          <% url = user_avatar.avatar.img_url %>
+          <%= image_tag(url, class:"avatar-img") %>
+        </div>
+      <% end %>
     </div>
-
   </div>
-  <div class="shopo">
-    <div class="shop-container" data-controller="shop" >
-      <div class="shop-center">
-        <%= image_tag("flechegauche.png", class: "shop-fleches", data:{action:"click->shop#gauche"})%>
-          <div class="shop-avatars">
-            <% @avatars.each do |avatar| %>
-              <%= image_tag(avatar.img_url, class: "shop-avatar d-none", data: { 'shop-target' => 'avatar' })%>
-
-<<<<<<< HEAD
-=======
-              <div class="price-place">
 
 
->>>>>>> 9192463007da5bd4d6a509ccef657edc1fc87c68
+
 <div class="shop-container" data-controller="shop" >
   <div class="shop-center">
     <%= image_tag("flechegauche.png", class: "shop-fleches", data:{action:"click->shop#gauche"})%>
@@ -43,7 +30,7 @@
             </div>
           <%else %>
             <% if current_user.balance >= avatar.price %>
-            <div class="avatar-price price-green price-red" data-shop-target="price">
+            <div class="avatar-price price-green" data-shop-target="price">
               <%= avatar.price %>
             </div>
             <div class="shop-buy-button" data-action="click->shop#buyAvatar">
@@ -69,9 +56,5 @@
       <%= form.text_field :avatar_id , data: {'shop-target' => 'avatarid'}%>
       <%= form.submit %>
     <% end  %>
-<<<<<<< HEAD
-=======
-
->>>>>>> 9192463007da5bd4d6a509ccef657edc1fc87c68
   </div>
 </div>
