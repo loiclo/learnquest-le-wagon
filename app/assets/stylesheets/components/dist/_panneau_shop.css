@@ -69,12 +69,3 @@
   background-color: black;
   opacity: 0.5;
 }
-
-.buy-btn-place {
-  width: 150px;
-  cursor: pointer;
-  height: 60px;
-  position: absolute;
-  top: -6%;
-  left: -416%;
-}
