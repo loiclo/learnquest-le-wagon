@@ -60,6 +60,18 @@
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.5), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
 }
 
+.panneau-inventaire {
+  background-image: url("panneau-inventaire.png");
+  font-family: "Kalam", "cursive";
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  height: 445px;
+  width: 600px;
+}
+
 .panneau {
   background-image: url("panneau.png");
   font-family: "Kalam", "cursive";
