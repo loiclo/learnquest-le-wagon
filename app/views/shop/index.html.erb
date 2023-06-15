@@ -32,7 +32,7 @@
           <%else %>
             <% if current_user.balance >= avatar.price %>
             <div class="avatar-price price-green" data-shop-target="price">
-              <%= avatar.price %>
+              <%= avatar.price %><%= image_tag("piece.png", class: "reward-img1") %>
             </div>
             <div class="shop-buy-button" data-action="click->shop#buyAvatar">
               <div class="shop-action">
@@ -41,7 +41,7 @@
             </div>
               <% else %>
                   <div class="avatar-price price-red" data-shop-target="price">
-                <%= avatar.price %>
+                <%= avatar.price %><%= image_tag("piece.png", class: "reward-img1") %>
                 </div>
                 <div class="shop-buy-button">
                   <div class="shop-action">
