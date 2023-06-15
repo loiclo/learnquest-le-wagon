@@ -7,6 +7,7 @@ export default class extends Controller {
   }
 
   process(event){
-    console.log(event.currentTarget)
+
+    console.log()
   }
 }

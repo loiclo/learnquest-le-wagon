@@ -1,4 +1,6 @@
-<div class="avatar-card" data-action="click->inventory#process">
-  <% url = user_avatar.avatar.img_url %>
-  <%= image_tag(url, class:"avatar-img") %>
-</div>
+<%= link_to change_avatar_path(user_avatar), data: {turbo_method: "patch"} do%>
+  <div class="avatar-card <%= "active" if user_avatar.equiped%>">
+    <% url = user_avatar.avatar.img_url %>
+    <%= image_tag(url, class:"avatar-img") %>
+  </div>
+<% end %>

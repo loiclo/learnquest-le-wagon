@@ -10,4 +10,14 @@ class User < ApplicationRecord
          has_many :worlds, through: :user_worlds
          has_many :questions, through: :user_questions
          has_many :user_avatars, dependent: :destroy
+
+
+  after_create :assign_avatar
+
+  def assign_avatar
+    ua = UserAvatar.new(avatar: Avatar.first)
+    ua.user = self
+    ua.equiped = true
+    ua.save!
+  end
 end
