@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_14_151220) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_15_094931) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -40,6 +40,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_14_151220) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["quiz_id"], name: "index_questions_on_quiz_id"
+  end
+
+  create_table "quests", force: :cascade do |t|
+    t.string "title"
+    t.integer "reward"
+    t.bigint "world_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["world_id"], name: "index_quests_on_world_id"
   end
 
   create_table "quizzes", force: :cascade do |t|
@@ -120,6 +129,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_14_151220) do
 
   add_foreign_key "answers", "questions"
   add_foreign_key "questions", "quizzes"
+  add_foreign_key "quests", "worlds"
   add_foreign_key "quizzes", "worlds"
   add_foreign_key "user_avatars", "avatars"
   add_foreign_key "user_avatars", "users"
