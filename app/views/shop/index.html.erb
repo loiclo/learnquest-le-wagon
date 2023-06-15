@@ -1,36 +1,49 @@
+<div class="shop-index">
 
-<div class="inventory-container">
+  <div class="inventory-container">
+    <div class="panneau inventory-img ">
+      <div class="inventory-avatars">
+        <% current_user.user_avatars.each do |user_avatar| %>
+          <div class="avatar-card">
+            <% url = user_avatar.avatar.img_url %>
+            <%= image_tag(url, class:"avatar-img") %>
+          </div>
+        <% end %>
+      </div>
+    </div>
 
-</div>
+  </div>
+  <div class="shopo">
+    <div class="shop-container" data-controller="shop" >
+      <div class="shop-center">
+        <%= image_tag("flechegauche.png", class: "shop-fleches", data:{action:"click->shop#gauche"})%>
+          <div class="shop-avatars">
+            <% @avatars.each do |avatar| %>
+              <%= image_tag(avatar.img_url, class: "shop-avatar d-none", data: { 'shop-target' => 'avatar' })%>
 
-<div class="shop-container" data-controller="shop" >
-  <div class="shop-center">
-    <%= image_tag("flechegauche.png", class: "shop-fleches", data:{action:"click->shop#gauche"})%>
-      <div class="shop-avatars">
-        <% @avatars.each do |avatar| %>
-          <%= image_tag(avatar.img_url, class: "shop-avatar d-none", data: { 'shop-target' => 'avatar' })%>
+              <div class="price-place">
 
-          <div class="price-place">
+              <div class="avatar-price d-none <%= if current_user.balance >= avatar.price
+              "price-green"
+                else
+                "price-red"
+                end%>" data-shop-target="price"><%= avatar.price %></div>
+              <div class="buy-btn-place d-none" data-action="click->shop#buyAvatar" data-avatar-id="<%= avatar.id %>" data-shop-target="btn" >
+                <%= form_with url:user_avatars_path, data:{'shop-target' => 'form'}, class:"d-none" do |form|%>
+                  <%= form.text_field :avatar_id , data: {'shop-target' => 'avatarid'}%>
+                  <%= form.submit %>
+                <% end  %>
 
-          <div class="avatar-price d-none <%= if current_user.balance >= avatar.price
-          "price-green"
-            else
-            "price-red"
-            end%>" data-shop-target="price"><%= avatar.price %></div>
-          <div class="buy-btn-place d-none" data-action="click->shop#buyAvatar" data-avatar-id="<%= avatar.id %>" data-shop-target="btn" >
-            <%= form_with url:user_avatars_path, data:{'shop-target' => 'form'}, class:"d-none" do |form|%>
-              <%= form.text_field :avatar_id , data: {'shop-target' => 'avatarid'}%>
-              <%= form.submit %>
-            <% end  %>
 
+              </div>
+
+            </div>
+          <% end %>
 
           </div>
-
+          <%= image_tag("flechedroite.png", class: "shop-fleches", data:{action:"click->shop#droite"})%>
         </div>
-      <% end %>
-
-      </div>
-      <%= image_tag("flechedroite.png", class: "shop-fleches", data:{action:"click->shop#droite"})%>
+        <%= image_tag("panneaumagasin.png", class: "panneau-shop", style: 'width:550px;')%>
     </div>
-    <%= image_tag("panneaumagasin.png", class: "panneau-shop", style: 'width:550px;')%>
+  </div>
 </div>

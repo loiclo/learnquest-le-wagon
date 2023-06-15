@@ -3,9 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  right: 10%;
-  top: 25%;
+
 }
 
 .shop-avatar {
@@ -75,4 +73,43 @@
   position: absolute;
   top: -6%;
   left: -416%;
+}
+
+.shop-index{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.inventory-img{
+  width: 555px;
+  height: 400px;
+  margin-top: 0;
+}
+
+.avatar-card{
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin: 8px;
+  border: 2px solid transparent;
+}
+
+.avatar-img{
+  width: 85px;
+  height: 100px;
+}
+
+.avatar-card:hover{
+  border: 2px solid yellow;
+}
+
+.inventory-avatars{
+  position: absolute;
+  top: 28%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
