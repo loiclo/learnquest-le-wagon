@@ -22,7 +22,14 @@
             else
             "price-red"
             end%>" data-shop-target="price"><%= avatar.price %></div>
-          <div class="buy-btn-place d-none" data-action="click->shop#buyAvatar" data-avatar-id="<%= avatar.id %>" data-shop-target="btn" ></div>
+          <div class="buy-btn-place d-none" data-action="click->shop#buyAvatar" data-avatar-id="<%= avatar.id %>" data-shop-target="btn" >
+            <%= form_with url:user_avatars_path, data:{'shop-target' => 'form'} do |form|%>
+              <%= form.text_field :avatar_id , data: {'shop-target' => 'avatarid'}%>
+              <%= form.submit %>
+            <% end  %>
+
+
+          </div>
         </div>
       <% end %>
 

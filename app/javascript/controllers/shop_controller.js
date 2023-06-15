@@ -2,11 +2,12 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="shop"
 export default class extends Controller {
-  static targets = ["avatar", "price", "btn"]
+  static targets = ["avatar", "price", "btn", "avatarid", "form"]
   connect() {
     this.avatarTarget.classList.remove("d-none")
     this.priceTarget.classList.remove("d-none")
     this.btnTarget.classList.remove("d-none")
+
   }
   droite(){
     let index = 0
@@ -52,9 +53,19 @@ export default class extends Controller {
   }
 
   buyAvatar(){
-    console.log(event.currentTarget)
-    const avatarId = event.currentTarget.dataset.avatarId;
-    console.log(avatarId);
 
+    const avatarId = event.currentTarget.dataset.avatarId;
+
+    this.avataridTarget.value = avatarId
+
+    fetch(this.formTarget.action, {
+      method: "POST",
+      headers: { "Accept": "application/json" },
+      body: new FormData(this.formTarget)
+    })
+      .then(response => response.json())
+      .then((data) => {
+        console.log(data)
+      })
   }
 }
