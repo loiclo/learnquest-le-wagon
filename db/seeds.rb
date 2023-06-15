@@ -91,8 +91,16 @@ p "-------creating quizzes--------"
 
 world_one_quiz_one = Quiz.create!(world_id: world_one.id, title: "Maths niveau 1", description: "Bienvenue dans le quizz Maths niveau 1", number: 1, reward: 100)
 world_one_quiz_two = Quiz.create!(world_id: world_one.id, title: "Maths niveau 2", description: "Bienvenue dans le quizz Maths niveau 2", number: 2, reward: 100)
+
+
 world_two_quiz_one = Quiz.create!(world_id: world_two.id, title: "Français niveau 1", description: "Bienvenue dans le quizz Français niveau 1", number: 1, reward: 100)
 world_two_quiz_two = Quiz.create!(world_id: world_two.id, title: "Français niveau 2", description: "Bienvenue dans le quizz Français niveau 2", number: 2, reward: 100)
+
+
+# last quiz created
+# On crée un quiz qu'il faudra remplacer a l'avenir par des vrais quizzes
+Quiz.create!(world_id: world_one.id, title: "Quizz Maths test", description: "Bienvenue dans le quizz Maths ", number: 3, reward: 100)
+
 
 p "————#{Quiz.count} quizzes created--------"
 
@@ -102,23 +110,19 @@ world_one_quiz_one_question_one = Question.create!(quiz_id: world_one_quiz_one.i
 world_one_quiz_one_question_two = Question.create!(quiz_id: world_one_quiz_one.id, title: "Quel nombre n'est pas un multiple de 6?", number: 2, reward: 20)
 world_one_quiz_one_question_three = Question.create!(quiz_id: world_one_quiz_one.id, title: "Quel nombre est le quart de 24", number: 3, reward: 30)
 
-
-
 world_one_quiz_two_question_one = Question.create!(quiz_id: world_one_quiz_two.id, title: "Donne le résultat de la multiplication suivante : 8 x 7", number: 1, reward: 10)
 world_one_quiz_two_question_two = Question.create!(quiz_id: world_one_quiz_two.id, title: "Donne le résultat de la division suivante : 56 / 8", number: 2, reward: 20)
 world_one_quiz_two_question_three = Question.create!(quiz_id: world_one_quiz_two.id, title: "Pour avoir 56 bonbons, combien de paquets de 8 bonbons dois-je acheter?", number: 3, reward: 30)
 
 
 
-world_two_quiz_one_question_one = Question.create!(quiz_id: world_two_quiz_one.id, title: "Coche le synonyme de « manger »", number: 1, reward: 30)
-world_two_quiz_one_question_two = Question.create!(quiz_id: world_two_quiz_one.id, title: "Remplace le mot « avance » par son contraire. «L’araignée avance jusqu’à la lanterne.»", number: 2, reward: 30)
-world_two_quiz_one_question_three = Question.create!(quiz_id: world_two_quiz_one.id, title: "Retrouve les verbes dans la phrase suivante. « Mais comme il ne peut pondre ses œufs qu’en eau douce, il parcourt des milliers de kilomètres pour venir se reproduire dans une rivière.»", number: 3, reward: 30)
+world_two_quiz_one_question_one = Question.create!(quiz_id: world_two_quiz_one.id, title: "Question 1 à créer", number: 1, reward: 30)
+world_two_quiz_one_question_two = Question.create!(quiz_id: world_two_quiz_one.id, title: "Question 2 à créer", number: 2, reward: 30)
+world_two_quiz_one_question_three = Question.create!(quiz_id: world_two_quiz_one.id, title: "Question 3 à créer", number: 3, reward: 30)
 
-
-
-world_two_quiz_two_question_one = Question.create!(quiz_id: world_two_quiz_two.id, title: "Français niveau 2 - question 1 : intitulé de la question", number: 1, reward: 30)
-world_two_quiz_two_question_two = Question.create!(quiz_id: world_two_quiz_two.id, title: "Français niveau 2 - question 2 : intitulé de la question", number: 2, reward: 30)
-world_two_quiz_two_question_three = Question.create!(quiz_id: world_two_quiz_two.id, title: "Français niveau 2 - question 3 : intitulé de la question", number: 3, reward: 30)
+world_two_quiz_two_question_one = Question.create!(quiz_id: world_two_quiz_two.id, title: "Question 1 à créer", number: 1, reward: 30)
+world_two_quiz_two_question_two = Question.create!(quiz_id: world_two_quiz_two.id, title: "Question 2 à créer", number: 2, reward: 30)
+world_two_quiz_two_question_three = Question.create!(quiz_id: world_two_quiz_two.id, title: "Question 3 à créer", number: 3, reward: 30)
 
 
 p "————#{Question.count} questions created--------"
@@ -208,8 +212,20 @@ p "-------creating user_quizzes--------"
 
 hugo_user_world_one_quiz_one = UserQuiz.create!(user_id: hugo.id, quiz_id: world_one_quiz_one.id, done_flag: false)
 hugo_user_world_one_quiz_two = UserQuiz.create!(user_id: hugo.id, quiz_id: world_one_quiz_two.id, done_flag: false)
+
+
+# on crée 7 userquiz (pour arriver a un total de 9) afin de les afficher proprement.
+# c'est 7 fois le meme quizz (créé plus haut)
+# a modifier par la suite
+7.times do
+  UserQuiz.create!(user_id: hugo.id, quiz_id: Quiz.last.id, done_flag: false)
+end
+
+
 hugo_user_world_two_quiz_one = UserQuiz.create!(user_id: hugo.id, quiz_id: world_two_quiz_one.id, done_flag: false)
 hugo_user_world_two_quiz_two = UserQuiz.create!(user_id: hugo.id, quiz_id: world_two_quiz_two.id, done_flag: false)
+
+
 
 guillaume_user_world_one_quiz_one = UserQuiz.create!(user_id: guillaume.id, quiz_id: world_one_quiz_one.id, done_flag: false)
 guillaume_user_world_one_quiz_two = UserQuiz.create!(user_id: guillaume.id, quiz_id: world_one_quiz_two.id, done_flag: false)
