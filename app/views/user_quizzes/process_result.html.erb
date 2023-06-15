@@ -2,8 +2,40 @@
   <div class="pannel-place">
 
     <div class="panneau">
-      <%= image_tag("panneau.png", class: "panneau-img") %>
-      <div class="result-title">Resultats</div>
+
+
+
+      <div class="star-container">
+        <% if UserQuiz.find_by(user:current_user, quiz: @quiz).star == 0 %>
+        <div class="div-stars-pr">
+          <div class="fa-solid fa-star medium-pr"></div>
+          <div class="fa-solid fa-star big-pr"></div>
+          <div class="fa-solid fa-star medium-pr"></div>
+        </div>
+        <% elsif UserQuiz.find_by(user:current_user, quiz: @quiz).star == 1 %>
+        <div class="div-stars-pr">
+          <div class="fa-solid yellow fa-star medium-pr"></div>
+          <div class="fa-solid fa-star big-pr"></div>
+          <div class="fa-solid fa-star medium-pr"></div>
+        </div>
+        <% elsif UserQuiz.find_by(user:current_user, quiz: @quiz).star == 2 %>
+        <div class="div-stars-pr">
+          <div class="fa-solid yellow fa-star medium-pr"></div>
+          <div class="fa-solid fa-star big-pr"></div>
+          <div class="fa-solid yellow fa-star medium-pr"></div>
+        </div>
+        <% else %>
+        <div class="div-stars-pr">
+          <div class="fa-solid yellow fa-star medium-pr"></div>
+          <div class="fa-solid yellow fa-star big-pr"></div>
+          <div class="fa-solid yellow fa-star medium-pr"></div>
+        </div>
+        <% end %>
+
+      </div>
+
+
+
       <div class="result-infos">
 
         <% @user_questions.each do |user_question| %>
@@ -20,7 +52,7 @@
       <% end %>
       <div class="result-btns">
         <%= link_to "Retour", user_world_path(UserWorld.find_by(user: current_user ,world: @quiz.world)), class:"result-world-btn custom-btn-world" %>
-        <%= link_to "Shop", shop_index_path, class:"result-shop-btn custom-btn-shop" %>
+        <%= link_to "Boutique", shop_index_path, class:"result-shop-btn custom-btn-shop" %>
       </div>
       </div>
     </div>
