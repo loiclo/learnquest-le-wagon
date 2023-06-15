@@ -1,5 +1,5 @@
 .quiz-name{
-  font-family: 'Kiddosy regular';
+  font-family: ''Kalam', cursive';
   font-style: normal;
   font-weight: 400;
   font-size: 56px;
@@ -19,6 +19,7 @@
   color: #fff;
   border-radius: 5px;
   padding: 10px 25px;
+  font-family: 'Kalam', cursive;
   font-weight: 500;
   background: transparent;
   text-decoration: none;
@@ -50,9 +51,10 @@ border: none;
 height: 70px;
 width: 200px;
 color: $brown;
+font-family: 'Kalam', cursive;
 font-weight: bolder;
 font-size: x-large;
-font-family: "Kiddosy regular"
+font-family: "'Kalam', cursive"
 
 }
 .btn-start-qs:before {
@@ -103,8 +105,7 @@ font-family: "Kiddosy regular"
 }
 
 .question-title{
-
-  font-family: "Kiddosy regular";
+  font-family: "'Kalam', cursive";
   text-align: center;
   color: #FFFFFF;
   font-size: 25px;
@@ -113,7 +114,7 @@ font-family: "Kiddosy regular"
 }
 
 .question-number{
-  font-family: 'Kiddosy regular';
+  font-family: ''Kalam', cursive';
   font-style: normal;
   font-weight: 400;
   font-size: 56px;
@@ -128,7 +129,7 @@ font-family: "Kiddosy regular"
 }
 
 .result-title{
-  font-family: 'Kiddosy regular';
+  font-family: ''Kalam', cursive';
   font-style: normal;
   font-weight: 400;
   font-size: 56px;
@@ -167,6 +168,7 @@ font-family: "Kiddosy regular"
   color: #fff;
   border-radius: 5px;
   padding: 10px 25px;
+  font-family: 'Kalam', cursive;
   font-weight: 500;
   background: transparent;
   text-decoration: none;
@@ -195,7 +197,7 @@ width: 100px;
 color: $brown;
 font-weight: bolder;
 font-size: x-large;
-font-family: "Kiddosy regular";
+font-family: "'Kalam', cursive";
 
 }
 .submit-btn:before {
@@ -211,7 +213,7 @@ font-family: "Kiddosy regular";
 
 .answer-text{
   font-size: 20px;
-  font-family: "Kiddosy regular";
+  font-family: "'Kalam', cursive";
   color: #FFFFFF;
 
   text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
