@@ -6,11 +6,12 @@
     </div>
     <div class="col-5">
       <%= image_tag("panneauquetes.png", class: "panneau-quete me-5", style: 'width:500px;')%>
-        <% @user_quests.each do |user_quest| %>
+        <div class="myquest"><% @user_quests.each do |user_quest| %>
         <ul>
-        <li><%= user_quest.quest.title %></li>
+        <li class="questnone"><i class="fa-solid fa-leaf medium" style="color: #c3cd17;"></i> <%= user_quest.quest.title %></li>
         </ul>
         <% end %>
+        </div>
     </div>
   </div>
 </div>

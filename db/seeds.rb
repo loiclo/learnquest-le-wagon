@@ -280,7 +280,6 @@ loic_user_world_two_quiz_two_question_one = UserQuestion.create!(user_id: loic.i
 loic_user_world_two_quiz_two_question_two = UserQuestion.create!(user_id: loic.id, question_id: world_two_quiz_two_question_two.id, done_flag: false, try: 0)
 loic_user_world_two_quiz_two_question_three = UserQuestion.create!(user_id: loic.id, question_id: world_two_quiz_two_question_three.id, done_flag: false, try: 0)
 
-
 eva_user_world_one_quiz_one_question_one = UserQuestion.create!(user_id: eva.id, question_id: world_one_quiz_one_question_one.id, done_flag: false, try: 0)
 eva_user_world_one_quiz_one_question_two = UserQuestion.create!(user_id: eva.id, question_id: world_one_quiz_one_question_two.id, done_flag: false, try: 0)
 eva_user_world_one_quiz_one_question_three = UserQuestion.create!(user_id: eva.id, question_id: world_one_quiz_one_question_three.id, done_flag: false, try: 0)
