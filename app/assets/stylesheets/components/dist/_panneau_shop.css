@@ -1,11 +1,12 @@
 .shop-container {
+  background-image: url("panneaumagasin.png");
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  right: 10%;
-  top: 25%;
+  height: 445px;
+  width: 600px;
+  background-size: cover;
 }
 
 .shop-avatar {
@@ -15,6 +16,8 @@
 .shop-fleches {
   width: 80px;
   height: 80px;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .shop-center {
@@ -36,7 +39,8 @@
 }
 
 .avatar-price {
-  font-family: "'Kalam', cursive";
+  height: 65px;
+  font-family: "Kalam", "cursive";
   font-size: 30px;
   text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -51,15 +55,6 @@
   font-family: "Kalam", cursive;
 }
 
-.price-place {
-  width: 80px;
-  height: 40px;
-  position: absolute;
-  top: 104%;
-  right: -14%;
-  text-align: center;
-}
-
 .inventory {
   position: absolute;
   top: 20%;
@@ -68,4 +63,80 @@
   height: 500px;
   background-color: black;
   opacity: 0.5;
+}
+
+.shop-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.shop-buy {
+  align-self: end;
+}
+
+.shop-buy-button {
+  background-image: url("bouton-acheter-vide");
+  background-size: cover;
+  display: flex;
+  height: 100px;
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.shop-action {
+  transition: 0.3s;
+  font-family: "Kalam", cursive;
+  font-size: 27px;
+  color: #FFFF;
+  margin-left: 5%;
+}
+
+.shop-index {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.inventory-img {
+  display: flex;
+  width: 555px;
+  height: 400px;
+  margin-top: 0;
+}
+
+.avatar-card {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin: 8px;
+  border: 2px solid transparent;
+}
+
+.avatar-img {
+  width: 85px;
+  height: 100px;
+}
+
+.avatar-card:hover {
+  cursor: pointer;
+  border: 2px solid yellow;
+}
+
+.inventory-avatars {
+  position: absolute;
+  top: 28%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.avatar-card.active {
+  border: 2px solid greenyellow;
 }

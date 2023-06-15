@@ -25,7 +25,9 @@
 
             </div>
             <div class="shop-buy-button" data-action="click->shop#buyAvatar">
+              <div class="shop-action">
               <p>Equiper</p>
+              </div>
             </div>
           <%else %>
             <% if current_user.balance >= avatar.price %>
@@ -33,14 +35,18 @@
               <%= avatar.price %>
             </div>
             <div class="shop-buy-button" data-action="click->shop#buyAvatar">
+              <div class="shop-action">
               <p>Acheter</p>
+                </div>
             </div>
               <% else %>
                   <div class="avatar-price price-red" data-shop-target="price">
                 <%= avatar.price %>
                 </div>
                 <div class="shop-buy-button">
+                  <div class="shop-action">
                   <p>Acheter</p>
+                  </div>
                 </div>
             <% end %>
           <% end %>
