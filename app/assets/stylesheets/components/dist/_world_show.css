@@ -1,0 +1,134 @@
+.parent {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 32px;
+  grid-row-gap: 16px;
+}
+
+.div1 {
+  grid-area: 5/2/5/3;
+}
+
+.div1-stars {
+  grid-area: 4/2/5/3;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.div2 {
+  grid-area: 4/3/6/4;
+}
+
+.div2-stars {
+  grid-area: 3/3/4/4;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.div3 {
+  grid-area: 3/4/5/5;
+}
+
+.div4 {
+  grid-area: 2/5/4/6;
+}
+
+.div5 {
+  grid-area: 2/6/3/7;
+}
+
+.div6 {
+  grid-area: 3/7/4/8;
+}
+
+.div7 {
+  grid-area: 4/8/5/9;
+}
+
+.div8 {
+  grid-area: 5/9/5/10;
+}
+
+.div9 {
+  grid-area: 5/10/5/11;
+}
+
+.big {
+  font-family: 'Kalam', cursive;
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+
+.medium {
+  font-family: 'Kalam', cursive;
+  font-size: 20px;
+}
+
+.btn-start-ws {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ff8400;
+  box-shadow: 0px 6px 4px #D75B01;
+  border-radius: 45px;
+  border: none;
+  height: 40px;
+  width: 40px;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Kalam", cursive;
+  font-weight: bolder;
+  font-size: x-large;
+  text-decoration: none;
+}
+
+.btn-start-ws:before {
+  height: 0%;
+  width: 2px;
+}
+
+.btn-start-ws:hover {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.5), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
+}
+
+.btn-start-ws-grey {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #6fff00;
+  box-shadow: 0px 6px 4px #19db00;
+  border-radius: 45px;
+  border: none;
+  height: 40px;
+  width: 40px;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: 'Kalam', cursive;
+  font-weight: bolder;
+  font-size: x-large;
+  text-decoration: none;
+}
+
+.btn-start-ws-grey:before {
+  height: 0%;
+  width: 2px;
+}
+
+.btn-start-ws-grey:hover {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.5), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
+}
+
+.fa-star {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.yellow {
+  color: #ffd43b;
+  text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.3);
+}

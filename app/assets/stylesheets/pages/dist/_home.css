@@ -1,13 +1,12 @@
-// Specific CSS for your home-page
-.img-home1{
+.img-home1 {
   text-align: center;
   margin-top: 10px;
   z-index: 100;
 }
 
-body{
+body {
   overflow: hidden;
-  font-family: 'Kalam', cursive;
+  font-family: "Kalam", cursive;
 }
 
 .logo {
@@ -15,24 +14,18 @@ body{
   height: auto;
 }
 
-
-
-@media screen and (max-width: 1920px){
+@media screen and (max-width: 1920px) {
   .logo {
     max-width: 115%;
     margin-top: 35px;
   }
-
 }
-
-
 @media screen and (max-width: 768px) {
   .logo {
     max-width: 80%;
     /* Ajustez la taille et la position selon vos besoins */
   }
 }
-
 @media screen and (max-width: 480px) {
   .logo {
     max-width: 60%;
