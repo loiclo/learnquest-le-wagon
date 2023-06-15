@@ -1,5 +1,5 @@
 
-<div class="inventory">
+<div class="inventory-container">
 
 </div>
 
@@ -16,11 +16,14 @@
           "price-green"
             else
             "price-red"
-            end%>"data-shop-target="price">
-            <%= image_tag("pieceshow.png", class:"shop-balance-img") %>
-            <%= avatar.price %></div>
+            end%>" data-shop-target="price"><%= avatar.price %></div>
           <div class="buy-btn-place d-none" data-action="click->shop#buyAvatar" data-avatar-id="<%= avatar.id %>" data-shop-target="btn" >
-             <%= image_tag("bouton-vide.png", class:"shop-bouton-img") %>
+            <%= form_with url:user_avatars_path, data:{'shop-target' => 'form'}, class:"d-none" do |form|%>
+              <%= form.text_field :avatar_id , data: {'shop-target' => 'avatarid'}%>
+              <%= form.submit %>
+            <% end  %>
+
+
           </div>
 
         </div>
