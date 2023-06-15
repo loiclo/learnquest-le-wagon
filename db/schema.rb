@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema[7.0].define(version: 2023_06_15_121759) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -40,6 +42,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_15_121759) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["quiz_id"], name: "index_questions_on_quiz_id"
+  end
+
+  create_table "quests", force: :cascade do |t|
+    t.string "title"
+    t.integer "reward"
+    t.bigint "world_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["world_id"], name: "index_quests_on_world_id"
   end
 
   create_table "quizzes", force: :cascade do |t|
@@ -73,6 +84,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_15_121759) do
     t.datetime "updated_at", null: false
     t.index ["question_id"], name: "index_user_questions_on_question_id"
     t.index ["user_id"], name: "index_user_questions_on_user_id"
+  end
+
+  create_table "user_quests", force: :cascade do |t|
+    t.boolean "done_flag"
+    t.bigint "user_id", null: false
+    t.bigint "quest_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["quest_id"], name: "index_user_quests_on_quest_id"
+    t.index ["user_id"], name: "index_user_quests_on_user_id"
   end
 
   create_table "user_quizzes", force: :cascade do |t|
@@ -121,11 +142,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_15_121759) do
 
   add_foreign_key "answers", "questions"
   add_foreign_key "questions", "quizzes"
+  add_foreign_key "quests", "worlds"
   add_foreign_key "quizzes", "worlds"
   add_foreign_key "user_avatars", "avatars"
   add_foreign_key "user_avatars", "users"
   add_foreign_key "user_questions", "questions"
   add_foreign_key "user_questions", "users"
+  add_foreign_key "user_quests", "quests"
+  add_foreign_key "user_quests", "users"
   add_foreign_key "user_quizzes", "quizzes"
   add_foreign_key "user_quizzes", "users"
   add_foreign_key "user_worlds", "users"

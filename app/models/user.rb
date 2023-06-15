@@ -10,6 +10,7 @@ class User < ApplicationRecord
          has_many :worlds, through: :user_worlds
          has_many :questions, through: :user_questions
          has_many :user_avatars, dependent: :destroy
+         has_many :user_quests
 
 
   after_create :assign_avatar
@@ -20,4 +21,5 @@ class User < ApplicationRecord
     ua.equiped = true
     ua.save!
   end
+
 end
