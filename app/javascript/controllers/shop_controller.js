@@ -25,7 +25,6 @@ export default class extends Controller {
         index=i
       }
     })
-
     this.avatarTargets[index].classList.add("d-none")
     this.priceTargets[index].classList.add("d-none")
     this.btnTargets[index].classList.add("d-none")

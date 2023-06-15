@@ -69,12 +69,15 @@ font-family: "Kiddosy regular"
 
 
 .panneau{
+  background-image: url('panneau.png');
   position: relative;
-  top: 0%;
   height: 500px;
   width: 700px;
-  margin: 0 auto;
   margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
 }
 
 
