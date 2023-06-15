@@ -6,8 +6,8 @@
 }
 
 .balance-img{
-  width: 150px;
-  height: 80px;
+  width: 200px;
+  height: 100px;
 }
 
 .balance-place{
@@ -18,10 +18,19 @@
 
 .balance-user{
   color: yellow;
-  font-family: "'Kalam', cursive";
-  position: absolute;
-  right: 46%;
-  top: 13%;
+
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: 700;
   text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
   font-size: 29px;
+}
+
+.balance-txt-place{
+  position: absolute;
+  right: 18%;
+  top: 22%;
+  text-align: center;
+  font-family: "'Kalam', cursive";
+  width: 66px;
+  height: 42px;
 }

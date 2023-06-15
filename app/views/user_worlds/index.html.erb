@@ -8,7 +8,13 @@
       <%= image_tag("panneauquetes.png", class: "panneau-quete me-5", style: 'width:500px;')%>
         <div class="myquest"><% @user_quests.each do |user_quest| %>
         <ul>
-        <li class="questnone"><i class="fa-solid fa-leaf medium" style="color: #c3cd17;"></i> <%= link_to user_quest.quest.title, user_world_path(user_quest.quest.world.user_worlds.find_by(user: current_user)) %>   <%= user_quest.done_flag %></li>
+        <li class="questnone"><i class="fa-solid fa-leaf medium" style="color: #c3cd17;"></i> <%= link_to user_quest.quest.title, user_world_path(user_quest.quest.world.user_worlds.find_by(user: current_user)) %>
+          <% if user_quest.done_flag == true %>
+            <i class="fa-sharp fa-solid fa-check" style="color: #37ff00;"></i>
+          <% else %>
+            <i class="fa-sharp fa-solid fa-clock" style="color: #ffb752;"></i>
+          <% end %>
+           </li>
         </ul>
         <% end %>
         </div>

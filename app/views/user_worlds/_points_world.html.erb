@@ -29,14 +29,15 @@
 <% end %>
 
 
-<%# quiz-level-1 %>
-
 <% if user_quiz.questions.empty? %>
   <div class="div<%=index%> text-center"><%= link_to index,  root_path, class:"btn-start-ws" %>
   </div>
 <% else %>
   <% if user_quiz.done_flag %>
     <div class="div<%=index%> text-center"><%= link_to index,  user_world_user_quiz_path(@user_world, user_quiz), class:"btn-start-ws-grey div1" %>
+       <% if user_quiz === UserQuiz.where(user: current_user, done_flag: true).last %>
+    <%= image_tag ( current_user.user_avatars.where(equiped: true).first.avatar.img_url), class:"world-avatar" %>
+  <% end %>
     </div>
   <% else %>
     <div class="div<%=index%> text-center"><%= link_to index,  user_world_user_quiz_path(@user_world, user_quiz), class:"btn-start-ws div1" %>

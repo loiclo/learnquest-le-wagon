@@ -47,8 +47,8 @@
   color: #B65210;
   font-family: "Kalam", cursive;
   font-weight: bolder;
-  font-size: x-large;
-  font-family: "'Kalam', cursive";
+  font-size: 30px;
+  margin-top: 5%;
 }
 
 .btn-start-qs:before {
@@ -62,6 +62,7 @@
 
 .panneau {
   background-image: url("panneau.png");
+  font-family: "Kalam", "cursive";
   position: relative;
   height: 500px;
   width: 700px;
@@ -74,11 +75,13 @@
 
 .panneau-img {
   height: 500px;
+  font-family: "Kalam", "cursive";
 }
 
 .pannel-place {
   position: absolute;
   left: 25%;
+  font-family: "Kalam", "cursive";
 }
 
 .answers {
@@ -86,15 +89,15 @@
   top: 38%;
   left: 18%;
   width: 428px;
-  height: 230px;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
   justify-content: space-between;
+  font-family: "Kalam", "cursive";
 }
 
 .question-title {
-  font-family: "'Kalam', cursive";
+  font-family: "Kalam", "cursive";
   text-align: center;
   color: #FFFFFF;
   font-size: 25px;
@@ -135,6 +138,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: "Kalam", "cursive";
   margin-bottom: 20px;
 }
 
@@ -173,12 +177,12 @@
   box-shadow: 0px 6px 4px #D75B01;
   border-radius: 20px;
   border: none;
-  height: 50px;
-  width: 100px;
+  height: 55px;
+  width: 113px;
   color: #B65210;
   font-weight: bolder;
   font-size: x-large;
-  font-family: "'Kalam', cursive";
+  font-family: "Kalam", "cursive";
 }
 
 .submit-btn:before {
@@ -192,7 +196,7 @@
 
 .answer-text {
   font-size: 20px;
-  font-family: "'Kalam', cursive";
+  font-family: "Kalam", "cursive";
   color: #FFFFFF;
   text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
   margin-left: 10px;
