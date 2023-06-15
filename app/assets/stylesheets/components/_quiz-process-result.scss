@@ -164,13 +164,11 @@ font-family: "'Kalam', cursive";
 }
 
 .big-pr{
-  font-family: 'Kalam', cursive;
   font-size: 140px;
   margin-bottom: 5px;
 }
 
 .medium-pr{
-  font-family: 'Kalam', cursive;
   font-size: 80px;
 }
 
@@ -180,7 +178,7 @@ font-family: "'Kalam', cursive";
 
 }
 .div-stars-pr {
-  display: flex;
+    display: flex;
     justify-content: space-around;
     align-items: flex-end;
     position: absolute;
