@@ -1,0 +1,73 @@
+@charset "UTF-8";
+.bouton-co {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 85px;
+}
+.bouton-co .custom-btn {
+  margin: 20px;
+  padding: 10px 25px;
+  font-family: "Kalam", cursive;
+  font-weight: 500;
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  text-align: center;
+  /* Centrer horizontalement le texte */
+}
+.bouton-co .btn-2 {
+  height: 110px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: center;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #ffda16 0%, #ff8a00 100%);
+  box-shadow: 0px 6px 4px #d75b01;
+  border-radius: 54px;
+  border: none;
+  color: #b65210;
+  font-family: "Kalam", cursive;
+  font-weight: bolder;
+  font-size: x-large;
+  text-decoration: none;
+  white-space: nowrap;
+  /* Empêcher le texte de se retourner à la ligne */
+  overflow: hidden;
+  /* Masquer le texte qui dépasse */
+  text-overflow: ellipsis;
+  /* Afficher "..." lorsque le texte dépasse */
+}
+.bouton-co .btn-2:hover {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.5), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
+}
+@media screen and (max-width: 768px) {
+  .bouton-co {
+    margin-top: 30px;
+  }
+  .bouton-co .custom-btn {
+    max-width: 60%;
+  }
+  .bouton-co .btn-2 {
+    max-width: 60%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .bouton-co {
+    margin-top: 20px;
+  }
+  .bouton-co .custom-btn {
+    max-width: 25%;
+  }
+  .bouton-co .btn-2 {
+    max-width: 25%;
+  }
+}
