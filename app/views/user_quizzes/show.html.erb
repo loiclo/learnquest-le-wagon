@@ -15,7 +15,7 @@
     <div class="panneau">
       <%= image_tag("panneau.png", class: "panneau-img") %>
       <div class="quiz-name"><%= @user_quiz.quiz.title %></div>
-
+      <%= image_tag(@equiped_avatar.avatar.img_url, class: "start-img") %>
       <%= link_to "Commencer", user_world_user_quiz_user_question_path(UserWorld.find_by(user: current_user, world:@user_quiz.quiz.world) ,@user_quiz , UserQuestion.find_by(user: current_user , question: @quiz.questions.first)), class: "custom-btn-start-qs btn-start-qs" %>
 
     </div>

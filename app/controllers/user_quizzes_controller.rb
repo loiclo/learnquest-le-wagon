@@ -7,6 +7,8 @@ class UserQuizzesController < ApplicationController
   def show
     @user_quiz = UserQuiz.find(params[:id])
     @quiz = @user_quiz.quiz
+    @user_avatars = current_user.user_avatars.all
+    @equiped_avatar = @user_avatars.where(equiped: true).first
   end
 
   def process_result
