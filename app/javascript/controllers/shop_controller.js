@@ -25,7 +25,6 @@ export default class extends Controller {
         index=i
       }
     })
-
     this.avatarTargets[index].classList.add("d-none")
     this.priceTargets[index].classList.add("d-none")
     this.btnTargets[index].classList.add("d-none")
@@ -48,7 +47,19 @@ export default class extends Controller {
   }
 
   gauche(){
-    console.log('gauche')
+    let index = 0
+    this.avatarTargets.forEach((avatar,i) => {
+      if (!Array.from(avatar.classList).includes("d-none")){
+        index=i
+      }
+    })
+    this.avatarTargets[index].classList.add("d-none")
+    if (0 === index){
+      this.avatarTargets[this.avatarTargets.length - 1].classList.remove("d-none")
+    } else {
+      this.avatarTargets[index-1].classList.remove("d-none")
+    }
+
   }
 
   buyAvatar(){
