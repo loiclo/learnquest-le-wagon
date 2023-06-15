@@ -21,7 +21,7 @@ class UserAvatarsController < ApplicationController
   def change_avatar
     @user_avatars = current_user.user_avatars.all
     @equiped_avatar = @user_avatars.where(equiped: true).first
-    @equiped_avatar.update(equiped: false) if @equiped_avatar
+    @equiped_avatar && @equiped_avatar.update(equiped: false)
 
     @user_avatar = UserAvatar.find(params[:id])
     @user_avatar.update(equiped: true)
