@@ -99,7 +99,8 @@ world_two_quiz_two = Quiz.create!(world_id: world_two.id, title: "Français nive
 
 # last quiz created
 # On crée un quiz qu'il faudra remplacer a l'avenir par des vrais quizzes
-Quiz.create!(world_id: world_one.id, title: "Quizz Maths test", description: "Bienvenue dans le quizz Maths ", number: 3, reward: 100)
+quizz_math_generique = Quiz.create!(world_id: world_one.id, title: "Quizz Maths test", description: "Bienvenue dans le quizz Maths ", number: 3, reward: 100)
+quizz_francais_generique = Quiz.create!(world_id: world_two.id, title: "Quizz Français test", description: "Bienvenue dans le quizz Français ", number: 3, reward: 100)
 
 
 p "————#{Quiz.count} quizzes created--------"
@@ -214,16 +215,19 @@ hugo_user_world_one_quiz_one = UserQuiz.create!(user_id: hugo.id, quiz_id: world
 hugo_user_world_one_quiz_two = UserQuiz.create!(user_id: hugo.id, quiz_id: world_one_quiz_two.id, done_flag: false)
 
 
+hugo_user_world_two_quiz_one = UserQuiz.create!(user_id: hugo.id, quiz_id: world_two_quiz_one.id, done_flag: false)
+hugo_user_world_two_quiz_two = UserQuiz.create!(user_id: hugo.id, quiz_id: world_two_quiz_two.id, done_flag: false)
+
+
 # on crée 7 userquiz (pour arriver a un total de 9) afin de les afficher proprement.
 # c'est 7 fois le meme quizz (créé plus haut)
 # a modifier par la suite
 7.times do
-  UserQuiz.create!(user_id: hugo.id, quiz_id: Quiz.last.id, done_flag: false)
+  UserQuiz.create!(user_id: hugo.id, quiz_id: quizz_math_generique.id, done_flag: false)
+  UserQuiz.create!(user_id: hugo.id, quiz_id: quizz_francais_generique.id, done_flag: false)
 end
 
 
-hugo_user_world_two_quiz_one = UserQuiz.create!(user_id: hugo.id, quiz_id: world_two_quiz_one.id, done_flag: false)
-hugo_user_world_two_quiz_two = UserQuiz.create!(user_id: hugo.id, quiz_id: world_two_quiz_two.id, done_flag: false)
 
 
 
