@@ -7,7 +7,7 @@ class UserWorldsController < ApplicationController
   end
 
   def show
-    @user_worlds = UserWorld.all
     @user_world = UserWorld.find(params[:id])
+    @user_quizzes = @user_world.user_quizzes
   end
 end
