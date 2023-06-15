@@ -1,22 +1,21 @@
-.balance-show{
+.balance-show {
   width: 200px;
   position: relative;
   height: 100px;
-
 }
 
-.balance-img{
+.balance-img {
   width: 150px;
   height: 80px;
 }
 
-.balance-place{
+.balance-place {
   position: absolute;
   right: 3%;
   top: 6%;
 }
 
-.balance-user{
+.balance-user {
   color: yellow;
   font-family: "Kiddosy regular";
   position: absolute;
