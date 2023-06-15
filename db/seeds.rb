@@ -22,15 +22,6 @@ Avatar.destroy_all
 
 puts "Database cleaned"
 
-p "-------creating users--------"
-
-hugo = User.create!(email: "hugo@gmail.com", password: "123456", name: "Hugo")
-guillaume = User.create!(email: "guillaume@gmail.com", password: "123456", name: "Guillaume")
-loic = User.create!(email: "loic@gmail.com", password: "123456", name: "Loic")
-eva = User.create!(email: "eva@gmail.com", password: "123456", name: "Eva")
-
-p "--------#{User.count} users created--------"
-
 
 p "-------creating avatars--------"
 
@@ -41,15 +32,26 @@ canard_eva = Avatar.create!(name: "canard", img_url: "avatar4.png",price: 1030)
 
 p "--------#{User.count} avatars created--------"
 
+p "-------creating users--------"
+
+hugo = User.create!(email: "hugo@gmail.com", password: "123456", name: "Hugo")
+guillaume = User.create!(email: "guillaume@gmail.com", password: "123456", name: "Guillaume")
+loic = User.create!(email: "loic@gmail.com", password: "123456", name: "Loic")
+eva = User.create!(email: "eva@gmail.com", password: "123456", name: "Eva")
+
+p "--------#{User.count} users created--------"
+
+
+
 
 p "-------creating user avatar--------"
 
-UserAvatar.create!(user: hugo , avatar: chat_loic)
-UserAvatar.create!(user: guillaume, avatar: chat_loic)
-UserAvatar.create!(user: loic, avatar: chat_loic)
-UserAvatar.create!(user: eva, avatar: chat_loic)
+# UserAvatar.create!(user: hugo , avatar: chat_loic)
+# UserAvatar.create!(user: guillaume, avatar: chat_loic)
+# UserAvatar.create!(user: loic, avatar: chat_loic)
+# UserAvatar.create!(user: eva, avatar: chat_loic)
 
-p "--------#{User.count} user avatar created--------"
+# p "--------#{User.count} user avatar created--------"
 
 
 p "-------creating worlds--------"

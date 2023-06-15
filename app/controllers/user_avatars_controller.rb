@@ -17,4 +17,9 @@ class UserAvatarsController < ApplicationController
       end
     end
   end
+  def change_avatar
+    raise
+    @user_avatars = current_user.user_avatars.all
+    @equiped_avatar = @user_avatars.where(equiped: true)
+  end
 end

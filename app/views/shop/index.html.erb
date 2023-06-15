@@ -4,7 +4,7 @@
   <div class="panneau inventory-img" data-controller="inventory">
     <div class="inventory-avatars" >
       <% current_user.user_avatars.each do |user_avatar| %>
-        <div class="avatar-card" data-action="click->inventory#process">
+        <div class="avatar-card" data-action="click->inventory#process" data-id=<%=user_avatar.id%>>
           <% url = user_avatar.avatar.img_url %>
           <%= image_tag(url, class:"avatar-img") %>
         </div>
