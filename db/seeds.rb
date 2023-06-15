@@ -1,5 +1,7 @@
 puts "Cleaning up database..."
 
+UserQuest.destroy_all
+p "-------all user quests destroyed-------"
 UserQuestion.destroy_all
 p "-------all user questions destroyed-------"
 UserQuiz.destroy_all
@@ -8,6 +10,8 @@ UserWorld.destroy_all
 p "-------all user worlds destroyed-------"
 Answer.destroy_all
 p "-------all answers destroyed-------"
+Quest.destroy_all
+p "-------all quests destroyed-------"
 Question.destroy_all
 p "-------all questions destroyed-------"
 Quiz.destroy_all
@@ -58,6 +62,28 @@ world_one = World.create!(title: "Maths", description: "Bienvenue dans le monde 
 world_two = World.create!(title: "Français", description: "Bienvenue dans le monde merveilleux du Français", reward: 1000)
 
 p "————#{World.count} worlds created--------"
+
+p "-------creating quests--------"
+world_one_quest_one = Quest.create!(title: "Complete 1 quiz dans le monde des maths", world_id: world_one.id, reward: 200)
+world_two_quest_one = Quest.create!(title: "Complete 1 quiz dans le monde du français", world_id: world_two.id, reward: 200)
+
+p "--------#{Quest.count} quests created--------"
+
+p "-------creating user_quests--------"
+
+hugo_user_world_one_quest_one = UserQuest.create!(user_id: hugo.id, quest_id: world_one_quest_one.id, done_flag: false)
+hugo_user_world_two_quest_one = UserQuest.create!(user_id: hugo.id, quest_id: world_two_quest_one.id, done_flag: false)
+
+guillaume_user_world_one_quest_one = UserQuest.create!(user_id: guillaume.id, quest_id: world_one_quest_one.id, done_flag: false)
+guillaume_user_world_two_quest_one = UserQuest.create!(user_id: guillaume.id, quest_id: world_two_quest_one.id, done_flag: false)
+
+loic_user_world_one_quest_one = UserQuest.create!(user_id: loic.id, quest_id: world_one_quest_one.id, done_flag: false)
+loic_user_world_two_quest_one = UserQuest.create!(user_id: loic.id, quest_id: world_two_quest_one.id, done_flag: false)
+
+eva_user_world_one_quest_one = UserQuest.create!(user_id: eva.id, quest_id: world_one_quest_one.id, done_flag: false)
+eva_user_world_two_quest_one = UserQuest.create!(user_id: eva.id, quest_id: world_two_quest_one.id, done_flag: false)
+
+p "————#{UserQuest.count} user_quests created--------"
 
 p "-------creating quizzes--------"
 
