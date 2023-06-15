@@ -1,0 +1,3 @@
+class UserAvatarsController < ApplicationController
+
+end
