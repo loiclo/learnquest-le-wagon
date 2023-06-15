@@ -3,9 +3,10 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="inventory"
 export default class extends Controller {
   connect() {
-    console.log("controller connected")
+    console.log("ok")
   }
-  avatarProcess(){
+
+  process(event){
     console.log(event.currentTarget)
   }
 }

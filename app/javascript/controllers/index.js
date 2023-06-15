@@ -4,9 +4,6 @@
 
 import { application } from "./application"
 
-import Dist__ShopController from "./dist/shop_controller"
-application.register("dist--shop", Dist__ShopController)
-
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
@@ -18,3 +15,6 @@ application.register("quiz", QuizController)
 
 import ShopController from "./shop_controller"
 application.register("shop", ShopController)
+
+// import Dist__ShopController from "./dist/shop_controller"
+// application.register("dist--shop", Dist__ShopController)
