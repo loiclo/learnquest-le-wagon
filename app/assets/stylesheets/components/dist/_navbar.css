@@ -1,4 +1,5 @@
-.nav-lq{
+@charset "UTF-8";
+.nav-lq {
   height: 200px;
   width: 350px;
   margin: 0 auto;
@@ -8,7 +9,6 @@
   align-items: center;
   z-index: 100;
 }
-
 
 .nav-btn {
   background-color: rgba(0, 0, 0, 0.4);
@@ -32,11 +32,11 @@
   transform: scale(1);
 }
 
-.nav-img-1{
+.nav-img-1 {
   width: 75px;
 }
 
-.nav-img-3{
+.nav-img-3 {
   width: 70px;
 }
 
@@ -47,7 +47,7 @@
   border-radius: 5px;
   margin: 10px;
   padding: 5px 15px;
-  font-family: 'Kalam', cursive;
+  font-family: "Kalam", cursive;
   font-weight: 500;
   background: transparent;
   text-decoration: none;
@@ -55,40 +55,34 @@
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
-
 }
 
 .btn-Déconnexion {
-
-position: absolute;
-display: flex;
-align-items: center;
-justify-content: center;
-top: 30px;
-left: 30px;
-background: linear-gradient(180deg, #FFDA16 0%, #FF8A00 100%);
-box-shadow: 0px 6px 4px #D75B01;
-border-radius: 54px;
-border: none;
-height: 60px;
-width: 120px;
-color: #B65210;
-font-family: 'Kalam', cursive;
-font-weight: bolder;
-font-size: 16px;
-
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 30px;
+  left: 30px;
+  background: linear-gradient(180deg, #FFDA16 0%, #FF8A00 100%);
+  box-shadow: 0px 6px 4px #D75B01;
+  border-radius: 54px;
+  border: none;
+  height: 60px;
+  width: 120px;
+  color: #B65210;
+  font-family: "Kalam", cursive;
+  font-weight: bolder;
+  font-size: 16px;
 }
+
 .btn-Déconnexion:before {
   height: 0%;
   width: 2px;
 }
+
 .btn-Déconnexion:hover {
-  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-              -4px -4px 6px 0 rgba(116, 125, 136, .5),
-    inset -4px -4px 6px 0 rgba(255,255,255,.2),
-    inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.5), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
 }
