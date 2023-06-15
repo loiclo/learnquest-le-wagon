@@ -1,7 +1,7 @@
 .result-infos{
   position: absolute;
   top: 33%;
-  left: 33%;
+  left: 30%;
   width: 364px;
   height: 178px;
   display: flex;
@@ -55,7 +55,7 @@
   display: flex;
   width: 300px;
   position: absolute;
-  left: -9%;
+  left: -4%;
   top: 109%;
   justify-content: space-between;
 }
@@ -160,4 +160,26 @@ font-family: "Kiddosy regular";
               -4px -4px 6px 0 rgba(116, 125, 136, .5),
     inset -4px -4px 6px 0 rgba(255,255,255,.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+
+.big-pr{
+  font-size: 140px;
+  margin-bottom: 5px;
+}
+
+.medium-pr{
+  font-size: 80px;
+}
+
+.star-container{
+  position: relative;
+  width: 47%;
+
+}
+.div-stars-pr {
+  display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    position: absolute;
+    top: -56px;
 }
