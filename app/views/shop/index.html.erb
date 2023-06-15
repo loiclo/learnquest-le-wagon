@@ -21,6 +21,12 @@
             <% @avatars.each do |avatar| %>
               <%= image_tag(avatar.img_url, class: "shop-avatar d-none", data: { 'shop-target' => 'avatar' })%>
 
+<<<<<<< HEAD
+=======
+              <div class="price-place">
+
+
+>>>>>>> 9192463007da5bd4d6a509ccef657edc1fc87c68
 <div class="shop-container" data-controller="shop" >
   <div class="shop-center">
     <%= image_tag("flechegauche.png", class: "shop-fleches", data:{action:"click->shop#gauche"})%>
@@ -63,5 +69,9 @@
       <%= form.text_field :avatar_id , data: {'shop-target' => 'avatarid'}%>
       <%= form.submit %>
     <% end  %>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9192463007da5bd4d6a509ccef657edc1fc87c68
   </div>
 </div>
