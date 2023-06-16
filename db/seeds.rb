@@ -215,7 +215,7 @@ hugo_user_world_one_quiz_one = UserQuiz.create!(user_id: hugo.id, quiz_id: world
 hugo_user_world_one_quiz_two = UserQuiz.create!(user_id: hugo.id, quiz_id: world_one_quiz_two.id, done_flag: false)
 
 
-hugo_user_world_two_quiz_one = UserQuiz.create!(user_id: hugo.id, quiz_id: world_two_quiz_one.id, done_flag: true, star: 3)
+hugo_user_world_two_quiz_one = UserQuiz.create!(user_id: hugo.id, quiz_id: world_two_quiz_one.id, done_flag: false)
 hugo_user_world_two_quiz_two = UserQuiz.create!(user_id: hugo.id, quiz_id: world_two_quiz_two.id, done_flag: false)
 
 
@@ -231,7 +231,7 @@ end
 
 loic_user_world_one_quiz_one = UserQuiz.create!(user_id: loic.id, quiz_id: world_one_quiz_one.id, done_flag: false)
 loic_user_world_one_quiz_two = UserQuiz.create!(user_id: loic.id, quiz_id: world_one_quiz_two.id, done_flag: false)
-loic_user_world_two_quiz_one = UserQuiz.create!(user_id: loic.id, quiz_id: world_two_quiz_one.id, done_flag: true, star: 3)
+loic_user_world_two_quiz_one = UserQuiz.create!(user_id: loic.id, quiz_id: world_two_quiz_one.id, done_flag: false)
 loic_user_world_two_quiz_two = UserQuiz.create!(user_id: loic.id, quiz_id: world_two_quiz_two.id, done_flag: false)
 
 7.times do
@@ -241,7 +241,7 @@ end
 
 guillaume_user_world_one_quiz_one = UserQuiz.create!(user_id: guillaume.id, quiz_id: world_one_quiz_one.id, done_flag: false)
 guillaume_user_world_one_quiz_two = UserQuiz.create!(user_id: guillaume.id, quiz_id: world_one_quiz_two.id, done_flag: false)
-guillaume_user_world_two_quiz_one = UserQuiz.create!(user_id: guillaume.id, quiz_id: world_two_quiz_one.id, done_flag: true, star: 3)
+guillaume_user_world_two_quiz_one = UserQuiz.create!(user_id: guillaume.id, quiz_id: world_two_quiz_one.id, done_flag: false)
 guillaume_user_world_two_quiz_two = UserQuiz.create!(user_id: guillaume.id, quiz_id: world_two_quiz_two.id, done_flag: false)
 
 
@@ -252,7 +252,7 @@ end
 
 eva_user_world_one_quiz_one = UserQuiz.create!(user_id: eva.id, quiz_id: world_one_quiz_one.id, done_flag: false)
 eva_user_world_one_quiz_two = UserQuiz.create!(user_id: eva.id, quiz_id: world_one_quiz_two.id, done_flag: false)
-eva_user_world_two_quiz_one = UserQuiz.create!(user_id: eva.id, quiz_id: world_two_quiz_one.id, done_flag: true, star: 3)
+eva_user_world_two_quiz_one = UserQuiz.create!(user_id: eva.id, quiz_id: world_two_quiz_one.id, done_flag: false)
 eva_user_world_two_quiz_two = UserQuiz.create!(user_id: eva.id, quiz_id: world_two_quiz_two.id, done_flag: false)
 
 7.times do
